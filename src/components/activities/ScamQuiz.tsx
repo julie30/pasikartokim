@@ -272,7 +272,7 @@ export default function ScamQuiz() {
             Pakartoti veiklą
           </button>
 
-          <a className={styles.secondaryButton} href="/">
+          <a className={styles.secondaryButton} href="/veiklos">
             Grįžti į pradžią
           </a>
         </div>

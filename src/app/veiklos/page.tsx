@@ -21,6 +21,17 @@ const activities = [
     href: "/veiklos/internetines-apgavystes",
     category: "Skaitmeninis saugumas",
   },
+  {
+    title: "Ar tavo paskyra tikrai apsaugota?",
+    description:
+      "Patikrink, ar moki kurti saugesnius slaptažodžius, apsaugoti prisijungimo kodus ir tinkamai reaguoti į paskyros saugumo perspėjimus.",
+    icon: "🔐",
+    age: "11–15 metų",
+    duration: "8–10 min.",
+    situations: "8 situacijos",
+    href: "/veiklos/paskyros-saugumas",
+    category: "Paskyrų saugumas",
+  },
 ];
 
 export default function VeiklosPage() {

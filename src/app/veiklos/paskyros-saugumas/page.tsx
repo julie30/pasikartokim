@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import ScamQuiz from "@/components/activities/ScamQuiz";
-import styles from "./activity.module.css";
+import AccountSecurityQuiz from "@/components/activities/AccountSecurityQuiz";
+import styles from "../internetines-apgavystes/activity.module.css";
 
 export const metadata: Metadata = {
-  title: "Ar atpažintum internetinę apgavystę? | Pasikartokim.lt",
+  title: "Ar tavo paskyra tikrai apsaugota? | Pasikartokim.lt",
   description:
-    "Nemokama interaktyvi veikla 11–15 metų vaikams apie internetinių apgavysčių, netikrų nuorodų ir įtartinų žinučių atpažinimą.",
+    "Nemokama interaktyvi veikla 11–15 metų vaikams apie stiprius slaptažodžius, prisijungimo kodus ir saugų paskyrų naudojimą.",
 };
 
-export default function InternetinesApgavystesPage() {
+export default function PaskyrosSaugumasPage() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -29,7 +29,7 @@ export default function InternetinesApgavystesPage() {
         </Link>
 
         <Link className={styles.backLink} href="/veiklos">
-          ← Grįžti į veiklas
+          ← Grįžti į veiklų biblioteką
         </Link>
       </header>
 
@@ -37,15 +37,16 @@ export default function InternetinesApgavystesPage() {
         <section className={styles.intro}>
           <div className={styles.content}>
             <p className={styles.eyebrow}>
-              Skaitmeninio saugumo veikla
+              Paskyrų saugumo veikla
             </p>
 
-            <h1>Ar atpažintum internetinę apgavystę?</h1>
+            <h1>Ar tavo paskyra tikrai apsaugota?</h1>
 
             <p className={styles.description}>
-              Išnagrinėk 8 realistiškas interneto situacijas,
-              pasirink, kaip elgtumeisi, ir sužinok, į kokius
-              apgavystės požymius verta atkreipti dėmesį.
+              Išnagrinėk 8 paskyrų saugumo situacijas ir
+              sužinok, kaip kurti saugesnius slaptažodžius,
+              apsaugoti prisijungimo kodus bei saugiai naudotis
+              savo paskyromis.
             </p>
 
             <div
@@ -61,35 +62,44 @@ export default function InternetinesApgavystesPage() {
             <h2>Atlikęs veiklą išmoksi:</h2>
 
             <ul className={styles.learningList}>
-              <li>pastebėti sukčių kuriamą skubą ir spaudimą;</li>
-
               <li>
-                patikrinti siuntėją, nuorodą ir svetainės adresą;
+                kurti ilgus ir sunkiau atspėjamus slaptažodžius;
               </li>
 
               <li>
-                apsaugoti savo slaptažodžius ir banko duomenis;
+                kiekvienai svarbiai paskyrai naudoti skirtingą
+                slaptažodį;
               </li>
 
               <li>
-                kritiškai vertinti internete ir DI pateiktą
-                informaciją.
+                apsaugoti prisijungimo ir paskyros atkūrimo kodus;
+              </li>
+
+              <li>
+                saugiai prisijungti svetimame arba bendrame
+                įrenginyje;
+              </li>
+
+              <li>
+                tinkamai reaguoti į pranešimą apie nutekintą
+                slaptažodį.
               </li>
             </ul>
 
-            <ScamQuiz />
+            <AccountSecurityQuiz />
           </div>
 
           <aside className={styles.safetyCard}>
             <span className={styles.safetyIcon} aria-hidden="true">
-              🔎
+              🔐
             </span>
 
-            <h2>Svarbiausia taisyklė</h2>
+            <h2>Svarbus perspėjimas</h2>
 
             <p>
-              Kai žinutė skubina, gąsdina arba žada neįtikėtiną
-              prizą, sustok ir pirmiausia viską patikrink.
+              Šioje veikloje niekada neįvesk savo tikro
+              slaptažodžio, prisijungimo kodo ar kitų asmeninių
+              duomenų.
             </p>
           </aside>
         </section>

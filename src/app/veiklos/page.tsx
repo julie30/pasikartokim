@@ -32,6 +32,17 @@ const activities = [
     href: "/veiklos/paskyros-saugumas",
     category: "Paskyrų saugumas",
   },
+  {
+    title: "Ar moki saugoti savo privatumą internete?",
+    description:
+      "Sužinok, kaip apsaugoti asmeninius duomenis, pasirinkti saugesnius privatumo nustatymus, vertinti programėlių leidimus ir atsakingai skelbti turinį.",
+    icon: "🛡️",
+    age: "11–15 metų",
+    duration: "8–10 min.",
+    situations: "8 situacijos",
+    href: "/veiklos/interneto-privatumas",
+    category: "Interneto privatumas",
+  },
 ];
 
 export default function VeiklosPage() {

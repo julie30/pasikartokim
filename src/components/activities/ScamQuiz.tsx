@@ -1,5 +1,6 @@
 "use client";
 
+import ActivitySupport from "@/components/activities/ActivitySupport";
 import { useMemo, useRef, useState } from "react";
 import {
   scamScenarios,
@@ -262,7 +263,9 @@ export default function ScamQuiz() {
             },
           )}
         </div>
-
+        
+        <ActivitySupport />
+        
         <div className={styles.resultActions}>
           <button
             className={styles.startButton}

@@ -16,7 +16,7 @@ export default function Footer() {
         <nav className="site-footer__nav" aria-label="Puslapio nuorodos">
           <a href="#biblioteka">Mokymosi biblioteka</a>
           <a href="#klases">Klasės</a>
-          <a href="#paremti">Paremti</a>
+          <a href="#palaikyti-projekta">Palaikyti projektą</a>
         </nav>
 
         <div className="site-footer__bottom">

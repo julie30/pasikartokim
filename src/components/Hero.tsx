@@ -39,8 +39,8 @@ export default function Hero() {
             <a className="button button-secondary" href="#biblioteka">
               Peržiūrėti PDF
             </a>
-            <a className="button button-support" href="/paremti">
-              Paremti projektą
+            <a className="button button-support" href="/palaikyti-projekta">
+              Palaikyti projektą
             </a>
           </div>
         </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import ActivitySupport from "@/components/activities/ActivitySupport";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import {
@@ -252,7 +253,9 @@ export default function AccountSecurityQuiz() {
             </article>
           ))}
         </div>
-
+        
+        <ActivitySupport />
+        
         <div className={styles.resultActions}>
           <button
             className={styles.startButton}

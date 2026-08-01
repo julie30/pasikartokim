@@ -1,0 +1,91 @@
+.card {
+  display: grid;
+  margin-top: 32px;
+  padding: 24px;
+  gap: 20px;
+  border: 1px solid rgba(16, 42, 67, 0.1);
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(253, 223, 3, 0.25),
+      transparent 36%
+    ),
+    #fffdf2;
+}
+
+.icon {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border-radius: 20px;
+  background: #fddf03;
+  font-size: 1.8rem;
+}
+
+.content {
+  min-width: 0;
+}
+
+.label {
+  margin: 0 0 6px;
+  color: #007d88;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.content h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.35rem, 4vw, 1.8rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.content > p:last-of-type {
+  margin: 0 0 20px;
+  color: #5c6f82;
+  line-height: 1.65;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 46px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #fddf03;
+  color: #17324d;
+  font-weight: 900;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(23, 50, 77, 0.12);
+}
+
+.button:focus-visible {
+  outline: 4px solid rgba(0, 174, 189, 0.25);
+  outline-offset: 4px;
+}
+
+@media (min-width: 650px) {
+  .card {
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: 28px;
+    align-items: start;
+  }
+}
+
+@media (max-width: 500px) {
+  .button {
+    width: 100%;
+  }
+}

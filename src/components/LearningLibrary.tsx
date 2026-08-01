@@ -17,7 +17,7 @@ const resources = [
       "Atlik interaktyvias veiklas, iš karto gauk paaiškinimus ir sužinok savo rezultatą.",
     icon: "🧩",
     href: "/veiklos",
-    action: "Atidaryti veiklą",
+    action: "Atidaryti veiklas",
     badge: "Nauja",
   },
   {

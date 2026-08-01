@@ -41,14 +41,14 @@ export default function Header() {
           <Link href="#klases" onClick={closeMenu}>
             Klasės
           </Link>
-          <Link href="#paremti" onClick={closeMenu}>
-            Paremti
+          <Link href="#palaikyti-projekta" onClick={closeMenu}>
+            Palaikyti projektą
           </Link>
         </nav>
 
         <div className="site-header__actions">
           <Link href="/prisijungimas">Prisijungti</Link>
-          <Link href="/paremti">Paremti</Link>
+          <Link href="/palaikyti-projekta">Palaikyti projektą</Link>
         </div>
       </div>
     </header>

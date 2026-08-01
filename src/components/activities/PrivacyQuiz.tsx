@@ -1,5 +1,6 @@
 "use client";
 
+import ActivitySupport from "@/components/activities/ActivitySupport";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import {
@@ -255,6 +256,8 @@ export default function PrivacyQuiz() {
             </article>
           ))}
         </div>
+
+        <ActivitySupport />
 
         <div className={styles.resultActions}>
           <button

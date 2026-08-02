@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="hero-section" aria-labelledby="hero-title">
@@ -39,9 +41,9 @@ export default function Hero() {
             <a className="button button-secondary" href="#biblioteka">
               Peržiūrėti PDF
             </a>
-            <a className="button button-support" href="/palaikyti-projekta">
+            <Link className="button button-support" href="/palaikyti-projekta">
               Palaikyti projektą
-            </a>
+            </Link>
           </div>
         </div>
       </div>

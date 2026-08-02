@@ -1,6 +1,7 @@
 "use client";
 
 import ActivitySupport from "@/components/activities/ActivitySupport";
+import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import {
   scamScenarios,
@@ -275,9 +276,9 @@ export default function ScamQuiz() {
             Pakartoti veiklą
           </button>
 
-          <a className={styles.secondaryButton} href="/veiklos">
-            Grįžti į pradžią
-          </a>
+          <Link className={styles.secondaryButton} href="/veiklos">
+            Grįžti į veiklas
+          </Link>
         </div>
       </section>
     );
@@ -351,15 +352,11 @@ export default function ScamQuiz() {
 
           let answerClassName = styles.answerButton;
 
-          if (isAnswered && isSelected && isCorrect) {
+          if (isAnswered && isCorrect) {
             answerClassName = `${styles.answerButton} ${styles.correctAnswer}`;
-          }
-
-          if (isAnswered && isSelected && !isCorrect) {
+          } else if (isAnswered && isSelected) {
             answerClassName = `${styles.answerButton} ${styles.wrongAnswer}`;
-          }
-
-          if (isAnswered && !isSelected) {
+          } else if (isAnswered) {
             answerClassName = `${styles.answerButton} ${styles.inactiveAnswer}`;
           }
 

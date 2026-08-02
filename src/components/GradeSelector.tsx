@@ -2,32 +2,27 @@ const grades = [
   {
     grade: "1 klasė",
     description: "Raidės, garsai, skaičiai ir pirmieji mokymosi žingsniai.",
-    href: "/klases/1",
     icon: "🌱",
   },
   {
     grade: "2 klasė",
     description: "Skaitymas, rašymas, sudėtis, atimtis ir pasaulio pažinimas.",
-    href: "/klases/2",
     icon: "🌈",
   },
   {
     grade: "3 klasė",
     description: "Teksto suvokimas, tekstiniai uždaviniai ir gamtos temos.",
-    href: "/klases/3",
     icon: "🧭",
   },
   {
     grade: "4 klasė",
     description: "Daugyba, dalyba, trupmenos, skaitymas ir vasaros misijos.",
-    href: "/klases/4",
     icon: "⭐",
     featured: true,
   },
   {
     grade: "5 klasė",
     description: "Pasiruošimas vyresnių klasių ritmui ir savarankiškam mokymuisi.",
-    href: "/klases/5",
     icon: "🚀",
   },
 ];
@@ -54,7 +49,9 @@ export default function GradeSelector() {
               className={`grade-card ${item.featured ? "grade-card--featured" : ""}`}
               key={item.grade}
             >
-              {item.featured && <span className="grade-card__badge">Aktyvi</span>}
+              {item.featured && (
+                <span className="grade-card__badge">Ruošiama pirma</span>
+              )}
 
               <span className="grade-card__icon" aria-hidden="true">
                 {item.icon}
@@ -64,7 +61,9 @@ export default function GradeSelector() {
 
               <p>{item.description}</p>
 
-              <a href={item.href}>Pasirinkti</a>
+              <span className="grade-card__action">
+                Ruošiama
+              </span>
             </article>
           ))}
         </div>

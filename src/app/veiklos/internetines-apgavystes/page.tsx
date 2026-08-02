@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ScamQuiz from "@/components/activities/ScamQuiz";
+import Footer from "@/components/Footer";
 import styles from "./activity.module.css";
 
 export const metadata: Metadata = {
@@ -94,6 +95,8 @@ export default function InternetinesApgavystesPage() {
           </aside>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

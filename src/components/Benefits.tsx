@@ -1,7 +1,7 @@
 const benefits = [
   "Aiškus mokymosi kelias pagal klasę ir lygį.",
   "Galima naudoti be prisijungimo, jei reikia tik užduočių ar PDF.",
-  "Prisijungus galima išsaugoti progresą, žvaigždutes ir atliktas užduotis.",
+  "Ateityje prisijungus bus galima išsaugoti progresą, žvaigždutes ir atliktas užduotis.",
   "Mokytoja galės pakviesti mokinius į klasę ir matyti bendrą eigą.",
 ];
 

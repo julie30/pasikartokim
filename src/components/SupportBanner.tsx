@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SupportBanner() {
   return (
     <section
@@ -16,13 +18,9 @@ export default function SupportBanner() {
           </p>
 
           <div className="support-section__actions">
-            <a className="button button-primary" href="/palaikyti-projekta">
+            <Link className="button button-primary" href="/palaikyti-projekta">
               Palaikyti projektą
-            </a>
-
-            {/* <a className="button button-secondary" href="#biblioteka">
-              Peržiūrėti turinį
-            </a> */}
+            </Link>
           </div>
         </div>
 

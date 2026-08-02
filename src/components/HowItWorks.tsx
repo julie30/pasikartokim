@@ -12,12 +12,12 @@ const steps = [
   {
     number: "3",
     title: "Sek progresą",
-    description: "Prisijungęs mokinys gali matyti savo lygius ir pasiekimus.",
+    description: "Ateityje prisijungęs mokinys galės matyti savo lygius ir pasiekimus.",
   },
   {
     number: "4",
     title: "Prisijunk prie klasės",
-    description: "Mokytojos pakvietimu mokinys gali prisijungti prie klasės.",
+    description: "Ateityje mokytojos pakvietimu mokinys galės prisijungti prie klasės.",
   },
 ];
 
@@ -31,8 +31,7 @@ export default function HowItWorks() {
           <h2 id="how-title">Mokytis galima taip, kaip patogiausia</h2>
 
           <p>
-            Pasikartokim.lt galima naudoti be prisijungimo, individualiai sekant
-            savo progresą arba prisijungus prie mokytojos klasės.
+            Pasikartokim.lt šiuo metu galima naudoti be prisijungimo. Ateityje mokiniai galės sekti savo progresą ir prisijungti prie mokytojos klasės.
           </p>
         </div>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import styles from "./veiklos.module.css";
 
 export const metadata: Metadata = {
@@ -118,6 +119,8 @@ export default function VeiklosPage() {
           </div>
         </section>
       </main>
+      
+      <Footer />
     </div>
   );
 }

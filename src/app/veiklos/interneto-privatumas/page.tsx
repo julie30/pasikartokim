@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PrivacyQuiz from "@/components/activities/PrivacyQuiz";
+import Footer from "@/components/Footer";
 import styles from "../internetines-apgavystes/activity.module.css";
 
 export const metadata: Metadata = {
@@ -105,6 +106,8 @@ export default function InternetoPrivatumasPage() {
           </aside>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

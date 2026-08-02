@@ -1,12 +1,21 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const currentYear = new Date().getFullYear();
+
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="site-footer">
       <div className="site-footer__inner">
-        <a className="site-footer__logo" href="/" aria-label="Pasikartokim.lt pradžia">
-          <img src="/images/logo.svg" alt="Pasikartokim.lt" />
-        </a>
+        <Link className="site-footer__logo" href="/" aria-label="Pasikartokim.lt pradžia">
+          <Image
+            src="/images/logo.svg"
+            alt="Pasikartokim.lt"
+            width={340}
+            height={91}
+          />
+        </Link>
 
         <p className="site-footer__description">
           Lietuviška mokymosi platforma vaikams, tėvams ir mokytojams.
@@ -14,9 +23,9 @@ export default function Footer() {
         </p>
 
         <nav className="site-footer__nav" aria-label="Puslapio nuorodos">
-          <a href="#biblioteka">Mokymosi biblioteka</a>
-          <a href="#klases">Klasės</a>
-          <a href="#palaikyti-projekta">Palaikyti projektą</a>
+          <Link href="/#biblioteka">Mokymosi biblioteka</Link>
+          <Link href="/#klases">Klasės</Link>
+          <Link href="/palaikyti-projekta">Palaikyti projektą</Link>
         </nav>
 
         <div className="site-footer__bottom">

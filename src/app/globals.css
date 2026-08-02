@@ -212,6 +212,10 @@ main {
     color: var(--primary-dark);
   }
 
+  .site-header__nav .site-header__nav-support {
+    display: none;
+  }
+
   .site-header__actions {
     position: static;
     grid-column: 3;
@@ -234,11 +238,6 @@ main {
     color: var(--text);
     font-weight: 900;
     white-space: nowrap;
-  }
-
-  .site-header__actions a:first-child {
-    border: 2px solid rgba(16, 42, 67, 0.1);
-    background: rgba(255, 255, 255, 0.6);
   }
 
   .site-header__actions a:last-child {
@@ -516,10 +515,6 @@ li + li {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-  .hero-section__mini-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 /* DESKTOP */
@@ -538,14 +533,6 @@ li + li {
     align-content: center;
     padding: 74px 0;
   }
-
-    .hero-section__label {
-  color: var(--primary-light);
-}
-
-.hero-section__text {
-  color: var(--block-mint);
-}
 
   .hero-section__inner {
     width: min(1400px, calc(100% - 72px));
@@ -576,13 +563,6 @@ li + li {
   .hero-section__actions {
     max-width: 680px;
   }
-
-  .hero-section__panel {
-    max-width: 620px;
-    min-height: 360px;
-    align-content: center;
-    justify-self: end;
-  }
 }
 
 /* LARGE DESKTOP */
@@ -601,10 +581,6 @@ li + li {
   .hero-section h1 {
     max-width: 780px;
     font-size: clamp(4rem, 4vw, 5.2rem);
-  }
-
-  .hero-section__panel {
-    max-width: 680px;
   }
 }
 
@@ -816,7 +792,7 @@ li + li {
   font-size: 0.98rem;
 }
 
-.grade-card a {
+.grade-card__action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -829,7 +805,7 @@ li + li {
   font-weight: 900;
 }
 
-.grade-card--featured a {
+.grade-card--featured .grade-card__action {
   background: var(--primary);
   border-color: var(--primary);
   color: #ffffff;

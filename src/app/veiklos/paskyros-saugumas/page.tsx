@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import AccountSecurityQuiz from "@/components/activities/AccountSecurityQuiz";
+import Footer from "@/components/Footer";
 import styles from "../internetines-apgavystes/activity.module.css";
 
 export const metadata: Metadata = {
@@ -104,6 +105,8 @@ export default function PaskyrosSaugumasPage() {
           </aside>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -13,8 +14,18 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link className="site-header__logo" href="/" aria-label="Pasikartokim.lt pradžia">
-          <img src="/images/logo.svg" alt="Pasikartokim.lt" />
+        <Link
+          className="site-header__logo"
+          href="/"
+          aria-label="Pasikartokim.lt pradžia"
+          onClick={closeMenu}
+        >
+          <Image
+            src="/images/logo.svg"
+            alt="Pasikartokim.lt"
+            width={340}
+            height={91}
+          />
         </Link>
 
         <button
@@ -35,19 +46,24 @@ export default function Header() {
           className={`site-header__nav ${isMenuOpen ? "site-header__nav--open" : ""}`}
           aria-label="Pagrindinė navigacija"
         >
-          <Link href="#biblioteka" onClick={closeMenu}>
+          <Link href="/#biblioteka" onClick={closeMenu}>
             Mokymosi biblioteka
           </Link>
-          <Link href="#klases" onClick={closeMenu}>
+
+          <Link href="/#klases" onClick={closeMenu}>
             Klasės
           </Link>
-          <Link href="#palaikyti-projekta" onClick={closeMenu}>
+
+          <Link
+            className="site-header__nav-support"
+            href="/palaikyti-projekta"
+            onClick={closeMenu}
+          >
             Palaikyti projektą
           </Link>
         </nav>
 
         <div className="site-header__actions">
-          <Link href="/prisijungimas">Prisijungti</Link>
           <Link href="/palaikyti-projekta">Palaikyti projektą</Link>
         </div>
       </div>

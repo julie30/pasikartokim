@@ -244,7 +244,7 @@ export const diagnosticData = {
       skill: "sequencePrediction",
       difficulty: "medium",
 
-      scenario: ["Robotukas pradeda pažymėtame langelyje ir žiūri į dešinę."],
+      scenario: ["Robotukas pradeda pažymėtame langelyje."],
 
       question: "Kuriame langelyje robotukas sustos?",
 
@@ -278,13 +278,14 @@ export const diagnosticData = {
         startDirection: "right",
 
         commands: [
-          "Eik pirmyn 2 langelius.",
-          "Pasuk į kairę.",
-          "Eik pirmyn 1 langelį.",
+          "Eik 2 langelius į viršų.",
+          "Eik 1 langelį į dešinę.",
+          "Eik 1 langelį į apačią.",
+          "Eik 1 langelį į dešinę.",
         ],
 
         accessibilityText:
-          "Keturių eilučių ir keturių stulpelių tinklelis. Robotukas pradeda J langelyje ir žiūri į dešinę.",
+          "Keturių eilučių ir keturių stulpelių tinklelis. Robotukas pradeda J langelyje.",
       },
 
       characterImage: {
@@ -300,7 +301,7 @@ export const diagnosticData = {
           label: "D langelis",
           feedback: {
             title: "Dar ne visai",
-            text: "Patikrink pirmąją komandą. Robotukas turi nueiti du, o ne vieną langelį.",
+            text: "Patikrink visas komandas.",
           },
         },
         {
@@ -308,7 +309,7 @@ export const diagnosticData = {
           label: "H langelis",
           feedback: {
             title: "Teisingai!",
-            text: "Robotukas nuėjo du langelius į dešinę, pasuko į kairę ir pakilo vienu langeliu aukštyn.",
+            text: "Robotukas nuėjo du langelius į viršų, pasuko į dešinę, nusileido vienu langeliu žemyn ir paėjo į dešinę.",
           },
         },
         {
@@ -316,7 +317,7 @@ export const diagnosticData = {
           label: "K langelis",
           feedback: {
             title: "Dar ne visai",
-            text: "K yra tik pirmoji robotuko sustojimo vieta. Reikia įvykdyti visas komandas.",
+            text: "Reikia įvykdyti visas komandas.",
           },
         },
         {
@@ -324,7 +325,7 @@ export const diagnosticData = {
           label: "P langelis",
           feedback: {
             title: "Dar ne visai",
-            text: "Pasukęs į kairę robotukas žiūri aukštyn, o ne žemyn.",
+            text: "Iki P langelio jis nenuėjo.",
           },
         },
       ],
@@ -335,61 +336,101 @@ export const diagnosticData = {
     },
 
     {
-      id: "repeat-square",
-      order: 5,
-      type: "singleChoice",
-      title: "Kartojimo komandos klaida",
-      area: "algorithms",
-      skill: "loopUnderstanding",
-      difficulty: "hard",
+  id: "repeat-square",
+  order: 5,
+  type: "gridChoice",
+  title: "Kartojimo komandos klaida",
+  area: "algorithms",
+  skill: "loopUnderstanding",
+  difficulty: "hard",
 
-      scenario: [
-        "Robotukas turi nubrėžti kvadratą.",
-        "Algoritme parašyta: kartok 3 kartus – eik pirmyn 4 langelius ir pasuk į dešinę.",
-        "Robotukas nubrėžė tik tris kvadrato kraštines.",
-      ],
+  scenario: [
+    "Robotukas turi apvažiuoti kvadratą tinklelyje.",
+    "Jis pradeda F langelyje ir žiūri į dešinę.",
+    "Algoritme parašyta: kartok 3 kartus – eik pirmyn 1 langelį ir pasuk į dešinę.",
+  ],
 
-      question: "Ką reikia pakeisti, kad robotukas nubrėžtų visą kvadratą?",
+  question:
+    "Ką reikia pakeisti, kad robotukas apvažiuotų visą kvadratą?",
 
-      options: [
-        {
-          id: "repeat-two",
-          label: "Kartoti 2 kartus",
-          feedback: {
-            title: "Dar ne visai",
-            text: "Kartojant du kartus būtų nubrėžtos tik dvi kvadrato kraštinės.",
-          },
-        },
-        {
-          id: "repeat-four",
-          label: "Kartoti 4 kartus",
-          feedback: {
-            title: "Teisingai!",
-            text: "Kvadratas turi keturias kraštines, todėl abu veiksmus reikia pakartoti keturis kartus.",
-          },
-        },
-        {
-          id: "move-three",
-          label: "Eiti pirmyn 3 langelius",
-          feedback: {
-            title: "Dar ne visai",
-            text: "Šis pakeitimas sutrumpintų kraštines, tačiau jų vis tiek būtų tik trys.",
-          },
-        },
-        {
-          id: "remove-turn",
-          label: "Pašalinti komandą „Pasuk į dešinę“",
-          feedback: {
-            title: "Dar ne visai",
-            text: "Be posūkio robotukas judėtų tiesiai ir kvadrato nenubrėžtų.",
-          },
-        },
-      ],
+  grid: {
+    rows: 4,
+    columns: 4,
+    cells: [
+      { id: "A", label: "A" },
+      { id: "B", label: "B" },
+      { id: "C", label: "C" },
+      { id: "D", label: "D" },
+      { id: "E", label: "E" },
+      { id: "F", label: "F" },
+      { id: "G", label: "G" },
+      { id: "H", label: "H" },
+      { id: "I", label: "I" },
+      { id: "J", label: "J" },
+      { id: "K", label: "K" },
+      { id: "L", label: "L" },
+      { id: "M", label: "M" },
+      { id: "N", label: "N" },
+      { id: "O", label: "O" },
+      { id: "P", label: "P" },
+    ],
+    startCellId: "F",
+    startDirection: "right",
+    commands: [
+      "Kartok 3 kartus:",
+      "Eik pirmyn 1 langelį.",
+      "Pasuk į dešinę.",
+    ],
+    accessibilityText:
+      "Keturių eilučių ir keturių stulpelių tinklelis. Robotukas pradeda F langelyje ir žiūri į dešinę.",
+  },
 
-      correctAnswerId: "repeat-four",
-      gapCode: "repeat-loop",
-      recommendationId: "repeat-command",
+  characterImage: {
+    src: "/images/diagnostika/robotukas.png",
+    alt: "Draugiškas baltas ir tamsiai mėlynas robotukas.",
+    width: 2000,
+    height: 2000,
+  },
+
+  options: [
+    {
+      id: "repeat-two",
+      label: "Kartoti 2 kartus",
+      feedback: {
+        title: "Dar ne visai",
+        text: "Kartojant du kartus robotukas apvažiuotų tik dvi kvadrato kraštines.",
+      },
     },
+    {
+      id: "repeat-four",
+      label: "Kartoti 4 kartus",
+      feedback: {
+        title: "Teisingai!",
+        text: "Kvadratas turi keturias kraštines, todėl komandą reikia kartoti 4 kartus.",
+      },
+    },
+    {
+      id: "move-three",
+      label: "Eiti pirmyn 3 langelius",
+      feedback: {
+        title: "Dar ne visai",
+        text: "Pakeitus tik ėjimo atstumą, kartojimų vis tiek liktų per mažai visam kvadratui.",
+      },
+    },
+    {
+      id: "remove-turn",
+      label: "Pašalinti komandą „Pasuk į dešinę“",
+      feedback: {
+        title: "Dar ne visai",
+        text: "Be posūkio robotukas neapvažiuotų kvadrato, o judėtų tiesia kryptimi.",
+      },
+    },
+  ],
+
+  correctAnswerId: "repeat-four",
+  gapCode: "repeat-loop",
+  recommendationId: "repeat-command",
+},
 
     {
       id: "data-and-information",
@@ -402,7 +443,7 @@ export const diagnosticData = {
 
       scenario: [
         "Klasės mokiniai balsavo, kokį vaisių norėtų gauti per išvyką.",
-        "Obuolys surinko 6 balsus, bananas – 9, kriaušė – 4, o apelsinas – 7 balsus.",
+        "Obuolį pasirinko 6 mokiniai, bananą – 9, kriaušę – 4, o apelsiną – 7 mokiniai.",
       ],
 
       question: "Kuris teiginys yra iš šių duomenų gauta informacija?",
@@ -410,7 +451,7 @@ export const diagnosticData = {
       options: [
         {
           id: "apple-six",
-          label: "Obuolys surinko 6 balsus",
+          label: "Obuolys surinko 6 balsus.",
           feedback: {
             title: "Dar ne visai",
             text: "Tai vienas iš surinktų duomenų. Ieškok teiginio, kuris gautas palyginus kelis balsų skaičius.",
@@ -418,7 +459,7 @@ export const diagnosticData = {
         },
         {
           id: "banana-nine",
-          label: "Bananas surinko 9 balsus",
+          label: "Bananas surinko 9 balsus.",
           feedback: {
             title: "Dar ne visai",
             text: "Tai lentelėje arba sąraše pateiktas duomuo. Informacija gaunama duomenis palyginus arba išanalizavus.",
@@ -426,7 +467,7 @@ export const diagnosticData = {
         },
         {
           id: "banana-most-popular",
-          label: "Daugiausia mokinių pasirinko bananus",
+          label: "Daugiausia mokinių pasirinko bananus.",
           feedback: {
             title: "Teisingai!",
             text: "Palyginus visus balsų skaičius matyti, kad 9 yra didžiausias skaičius, todėl bananai buvo populiariausias pasirinkimas.",
@@ -434,7 +475,7 @@ export const diagnosticData = {
         },
         {
           id: "orange-seven",
-          label: "Apelsinas surinko 7 balsus",
+          label: "Apelsinas surinko 7 balsus.",
           feedback: {
             title: "Dar ne visai",
             text: "Tai vienas iš pateiktų duomenų. Ieškok išvados, kurią galima padaryti palyginus visus pasirinkimus.",
@@ -579,7 +620,7 @@ export const diagnosticData = {
       options: [
         {
           id: "forward-without-comment",
-          label: "Persiųsti nuotrauką draugui, bet nieko nekomentuoti",
+          label: "Persiųsti nuotrauką draugui, bet nieko nekomentuoti.",
           feedback: {
             title: "Dar ne visai",
             text: "Persiųsdamas nuotrauką prisidėtum prie jos platinimo, net jeigu pats neparašytum jokio komentaro.",
@@ -587,7 +628,7 @@ export const diagnosticData = {
         },
         {
           id: "reply-with-insult",
-          label: "Atsakyti nuotrauką įkėlusiam mokiniui tokiu pačiu įžeidimu",
+          label: "Atsakyti nuotrauką įkėlusiam mokiniui tokiu pačiu įžeidimu.",
           feedback: {
             title: "Dar ne visai",
             text: "Atsakymas kitu įžeidimu problemos neišsprendžia ir gali dar labiau paaštrinti konfliktą.",
@@ -596,7 +637,7 @@ export const diagnosticData = {
         {
           id: "save-and-report",
           label:
-            "Neplatinti nuotraukos, išsaugoti įrodymą ir pasakyti patikimam suaugusiajam",
+            "Neplatinti nuotraukos, išsaugoti įrodymą ir pasakyti patikimam suaugusiajam.",
           feedback: {
             title: "Teisingai!",
             text: "Žeminančio turinio nereikia platinti. Išsaugotas įrodymas ir patikimo suaugusiojo pagalba gali padėti sustabdyti netinkamą elgesį.",
@@ -604,7 +645,7 @@ export const diagnosticData = {
         },
         {
           id: "leave-and-ignore",
-          label: "Išeiti iš grupės ir apsimesti, kad nieko nepastebėjai",
+          label: "Išeiti iš grupės ir apsimesti, kad nieko nepastebėjai.",
           feedback: {
             title: "Dar ne visai",
             text: "Pasitraukti iš pokalbio galima, tačiau vien to gali nepakakti. Svarbu apie žeminantį elgesį pasakyti patikimam suaugusiajam.",
@@ -688,12 +729,12 @@ export const diagnosticData = {
         "Šis žmogus paprašė papasakoti daugiau apie save.",
       ],
 
-      question: "Kurio informacijos rinkinio Lukas neturėtų jam siųsti?",
+      question: "Kokios informacijos Lukas neturėtų jam siųsti?",
 
       options: [
         {
           id: "animal-and-books",
-          label: "Mėgstamiausias gyvūnas ir knygų žanras",
+          label: "Mėgstamiausias gyvūnas ir knygų žanras.",
           feedback: {
             title: "Dar ne visai",
             text: "Ši informacija paprastai neparodo, kur žmogus gyvena ar kaip su juo tiesiogiai susisiekti.",
@@ -701,7 +742,7 @@ export const diagnosticData = {
         },
         {
           id: "color-and-sport",
-          label: "Mėgstamiausia spalva ir sporto šaka",
+          label: "Mėgstamiausia spalva ir sporto šaka.",
           feedback: {
             title: "Dar ne visai",
             text: "Ši informacija paprastai neatskleidžia tikslios žmogaus tapatybės ar buvimo vietos.",
@@ -709,7 +750,7 @@ export const diagnosticData = {
         },
         {
           id: "address-phone-location",
-          label: "Namų adresas, telefono numeris ir dabartinė buvimo vieta",
+          label: "Namų adresas, telefono numeris ir dabartinė buvimo vieta.",
           feedback: {
             title: "Teisingai!",
             text: "Šie duomenys gali padėti nepažįstamam žmogui nustatyti, kur Lukas gyvena, kur yra ir kaip su juo susisiekti.",
@@ -717,7 +758,7 @@ export const diagnosticData = {
         },
         {
           id: "subject-and-board-game",
-          label: "Mėgstamiausias mokomasis dalykas ir stalo žaidimas",
+          label: "Mėgstamiausias mokomasis dalykas ir stalo žaidimas.",
           feedback: {
             title: "Dar ne visai",
             text: "Ši informacija paprastai neatskleidžia namų adreso, telefono numerio ar dabartinės buvimo vietos.",

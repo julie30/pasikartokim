@@ -12,6 +12,18 @@ export const metadata: Metadata = {
 
 const activities = [
   {
+    title: "Ką jau moku?",
+    description:
+      "Atlik 12 trumpų 5 klasės informatikos užduočių ir sužinok, kurios temos jau sekasi, o kurias verta pakartoti.",
+    icon: "💻",
+    age: "5 klasė",
+    duration: "10–15 min.",
+    situations: "12 užduočių",
+    href: "/veiklos/5-klase/informatika/ka-jau-moku",
+    category: "Informatika",
+  },
+
+  {
     title: "Ar atpažintum internetinę apgavystę?",
     description:
       "Išnagrinėk 8 interneto situacijas, pasirink saugiausią veiksmą ir iš karto gauk paaiškinimą.",
@@ -58,8 +70,8 @@ export default function VeiklosPage() {
           <h1>Mokykis atlikdamas veiklas</h1>
 
           <p>
-            Pasirink veiklą, atsakyk į klausimus ir iš karto
-            sužinok, ką jau moki bei ką dar verta prisiminti.
+            Pasirink veiklą, atsakyk į klausimus ir iš karto sužinok, ką jau
+            moki bei ką dar verta prisiminti.
           </p>
         </section>
 
@@ -77,16 +89,12 @@ export default function VeiklosPage() {
                     {activity.icon}
                   </span>
 
-                  <span className={styles.category}>
-                    {activity.category}
-                  </span>
+                  <span className={styles.category}>{activity.category}</span>
                 </div>
 
                 <h3>{activity.title}</h3>
 
-                <p className={styles.description}>
-                  {activity.description}
-                </p>
+                <p className={styles.description}>{activity.description}</p>
 
                 <div
                   className={styles.details}
@@ -113,13 +121,13 @@ export default function VeiklosPage() {
             <h2>Naujos veiklos bus pridedamos palaipsniui</h2>
 
             <p>
-              Čia atsiras kritinio mąstymo, finansinio raštingumo,
-              kalbos, gamtos ir kitų sričių veiklos.
+              Čia atsiras kritinio mąstymo, finansinio raštingumo, kalbos,
+              gamtos ir kitų sričių veiklos.
             </p>
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

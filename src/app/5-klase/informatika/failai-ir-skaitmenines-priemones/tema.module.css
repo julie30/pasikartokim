@@ -1,0 +1,1624 @@
+.page {
+  width: 100%;
+}
+
+/* HERO */
+
+.hero {
+  width: 100%;
+  padding: 48px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--block-blue) 0%,
+    var(--primary) 100%
+  );
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  width: 100%;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--block-mint);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+.backLink:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  max-width: 760px;
+  margin: 0 0 20px;
+  color: var(--surface);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.heroDescription {
+  max-width: 720px;
+  margin: 0;
+  color: var(--block-mint);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -90px;
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+}
+
+/* BENDROS ANTRAŠTĖS */
+
+.sectionLabel {
+  margin: 0 0 10px;
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  margin: 0 0 32px;
+  color: var(--text);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+/* KO IŠMOKSI */
+
+.learningSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 20px;
+  background: var(--surface);
+}
+
+.learningGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.learningCardLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.learningCard {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.learningCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 7px;
+  background: var(--card-accent, var(--primary));
+}
+
+.learningCardLink:nth-child(1) {
+  --card-accent: var(--accent);
+}
+
+.learningCardLink:nth-child(2) {
+  --card-accent: var(--block-blue);
+}
+
+.learningCardLink:nth-child(3) {
+  --card-accent: var(--block-green);
+}
+
+.learningCardLink:nth-child(4) {
+  --card-accent: var(--coral);
+}
+
+.learningCardLink:hover .learningCard {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.learningCardLink:nth-child(1):hover .learningCard {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.learningCardLink:nth-child(2):hover .learningCard {
+  border-color: var(--block-blue);
+  background: var(--primary-light);
+}
+
+.learningCardLink:nth-child(3):hover .learningCard {
+  border-color: var(--block-green);
+  background: var(--secondary-light);
+}
+
+.learningCardLink:nth-child(4):hover .learningCard {
+  border-color: var(--coral);
+  background: var(--pink-light);
+}
+
+.learningCardLink:focus-visible {
+  outline: 3px solid var(--block-blue);
+  outline-offset: 4px;
+  border-radius: 20px;
+}
+
+.cardNumber {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--card-accent, var(--block-blue));
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.learningCardLink:nth-child(1) .cardNumber {
+  color: var(--text);
+}
+
+.cardTitle {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.cardDescription {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* BENDRA TEMŲ STRUKTŪRA */
+
+.lessonSection {
+  width: 100%;
+  padding: 72px 24px;
+  scroll-margin-top: 90px;
+}
+
+.lessonInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lessonHeading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.lessonNumber {
+  color: var(--block-blue);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.lessonHeading h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.backToTop {
+  display: inline-block;
+  margin-top: 40px;
+  color: var(--muted);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backToTop:hover {
+  color: var(--block-blue);
+}
+
+.backToTop:focus-visible {
+  outline: 3px solid var(--block-blue);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* 01 FAILAI IR APLANKAI */
+
+.filesFoldersSection {
+  background: var(--accent);
+}
+
+.filesFoldersSection .lessonHeading h2,
+.filesFoldersSection .lessonNumber,
+.filesFoldersSection .backToTop {
+  color: var(--text);
+}
+
+.filesFoldersSection .backToTop:hover {
+  color: var(--block-blue);
+}
+
+.fileDefinition {
+  max-width: 760px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--primary-light);
+}
+
+.fileDefinition h2 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.4rem;
+  letter-spacing: -0.025em;
+}
+
+.fileDefinition p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.fileExample {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 28px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.fileName {
+  padding: 16px 18px;
+  color: var(--text);
+}
+
+.fileExtension {
+  align-self: stretch;
+  display: inline-flex;
+  padding: 16px 18px;
+  align-items: center;
+  background: var(--block-blue);
+  color: var(--surface);
+  font-weight: 800;
+}
+
+.fileExplanation {
+  max-width: 760px;
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  background: var(--accent-light);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.fileExplanation p {
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.fileExplanation p:last-child {
+  margin-bottom: 0;
+}
+
+.fileExplanation strong {
+  color: var(--primary-dark);
+}
+
+.folderBlock {
+  max-width: 760px;
+  margin-top: 40px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--block-mint);
+}
+
+.folderBlock h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.4rem;
+  letter-spacing: -0.025em;
+}
+
+.folderBlock p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.compareBlock {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 760px;
+  margin-top: 24px;
+}
+
+.compareBlock > div {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.compareBlock > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 7px;
+}
+
+.compareBlock > div:nth-child(1)::before {
+  background: var(--block-blue);
+}
+
+.compareBlock > div:nth-child(2)::before {
+  background: var(--block-green);
+}
+
+.compareLabel {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.compareBlock > div:nth-child(1) .compareLabel {
+  color: var(--block-blue);
+}
+
+.compareBlock > div:nth-child(2) .compareLabel {
+  color: var(--block-green);
+}
+
+.compareBlock p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* 02 FAILŲ TIPAI */
+
+.fileTypesSection {
+  background: var(--block-blue);
+}
+
+.fileTypesSection .lessonHeading h2,
+.fileTypesSection .backToTop {
+  color: var(--surface);
+}
+
+.fileTypesSection .lessonNumber,
+.fileTypesSection .backToTop:hover {
+  color: var(--accent);
+}
+
+.fileTypeDefinition {
+  max-width: 760px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.fileTypeDefinition h3 {
+  margin: 0 0 10px;
+  color: var(--block-blue);
+  font-size: 1.4rem;
+  letter-spacing: -0.025em;
+}
+
+.fileTypeDefinition p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.fileTypesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 760px;
+  margin-top: 24px;
+}
+
+.fileTypeFlipCard {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  perspective: 1100px;
+}
+
+.fileTypeFlipInner {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 310px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.fileTypeFlipCard[aria-pressed="true"] .fileTypeFlipInner {
+  transform: rotateY(180deg);
+}
+
+.fileTypeFlipFront,
+.fileTypeFlipBack {
+  grid-area: 1 / 1;
+  display: flex;
+  min-height: 310px;
+  height: 100%;
+  padding: 24px;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background: var(--surface);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.fileTypeFlipFront {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.fileTypeFlipFront::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 72px;
+  height: 8px;
+  border-radius: 8px 0 0 0;
+  background: var(--accent);
+}
+
+.fileTypeFlipImage {
+  display: block;
+  width: min(180px, 75%);
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.fileTypeFlipFront strong {
+  color: var(--text);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.fileTypeFlipHint {
+  margin-top: 8px;
+  color: var(--primary-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.fileTypeFlipBack {
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.fileTypeFlipExtension {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.fileTypeFlipBack strong {
+  margin-bottom: 12px;
+  color: var(--text);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.fileTypeFlipDescription {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.fileTypeFlipCard:hover .fileTypeFlipFront {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.fileTypeFlipCard:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: var(--radius);
+}
+
+.fileTypeNote {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.fileTypeNote h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.fileTypeNote p {
+  margin: 0 0 10px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.fileTypeNote p:last-child {
+  margin-bottom: 0;
+}
+
+/* 03 FAILŲ TVARKYMAS */
+
+.fileManagementSection {
+  background: var(--block-green);
+}
+
+.fileManagementSection .lessonHeading h2,
+.fileManagementSection .lessonNumber,
+.fileManagementSection .backToTop {
+  color: var(--text);
+}
+
+.fileManagementSection .backToTop:hover {
+  color: var(--block-blue);
+}
+
+.fileManagementDefinition {
+  max-width: 760px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--block-mint);
+}
+
+.fileManagementDefinition h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.4rem;
+  letter-spacing: -0.025em;
+}
+
+.fileManagementDefinition p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.managementGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 760px;
+  margin-top: 24px;
+}
+
+.managementCard {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.managementCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 7px;
+  background: var(--management-accent, var(--block-blue));
+}
+
+.managementCard:nth-child(1),
+.managementCard:nth-child(4) {
+  --management-accent: var(--block-blue);
+}
+
+.managementCard:nth-child(2),
+.managementCard:nth-child(5) {
+  --management-accent: var(--accent);
+}
+
+.managementCard:nth-child(3),
+.managementCard:nth-child(6) {
+  --management-accent: var(--coral);
+}
+
+.managementCard h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 1.15rem;
+}
+
+.managementCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.copyMoveBlock {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--block-blue);
+  box-shadow: var(--shadow);
+}
+
+.copyMoveBlock > h3 {
+  margin: 0 0 16px;
+  color: var(--surface);
+  font-size: 1.3rem;
+  letter-spacing: -0.025em;
+}
+
+.copyMoveGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.copyMoveGrid > div {
+  padding: 18px;
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.copyMoveGrid strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--block-blue);
+}
+
+.copyMoveGrid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.namingBlock {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--accent-light);
+  box-shadow: var(--shadow);
+}
+
+.namingBlock h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.3rem;
+  letter-spacing: -0.025em;
+}
+
+.namingBlock > p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.namingExamples {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.namingExamples > div {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.namingExamples p {
+  margin: 6px 0 0;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.badExample,
+.goodExample {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.badExample {
+  color: #b45309;
+}
+
+.goodExample {
+  color: #047857;
+}
+
+.folderStructureBlock {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--pink-light);
+  box-shadow: var(--shadow);
+}
+
+.folderStructureBlock h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.3rem;
+  letter-spacing: -0.025em;
+}
+
+.folderStructureBlock > p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.folderTree {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.folderTreeItem,
+.folderTreeFile {
+  line-height: 1.7;
+}
+
+.folderTreeItem {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.folderTreeFile {
+  color: var(--muted);
+}
+
+.folderTreeChild {
+  margin-left: 20px;
+  padding-left: 14px;
+  border-left: 2px solid var(--border);
+}
+
+/* 04 SKAITMENINĖS PRIEMONĖS */
+
+.digitalToolsSection {
+  background: var(--coral);
+}
+
+.digitalToolsSection .lessonHeading h2,
+.digitalToolsSection .lessonNumber,
+.digitalToolsSection .backToTop {
+  color: var(--text);
+}
+
+.digitalToolsSection .backToTop:hover {
+  color: var(--surface);
+}
+
+.digitalToolsDefinition {
+  max-width: 760px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--primary-light);
+}
+
+.digitalToolsDefinition h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.4rem;
+  letter-spacing: -0.025em;
+}
+
+.digitalToolsDefinition p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.digitalToolsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 760px;
+  margin-top: 24px;
+}
+
+.digitalToolsGrid > :nth-child(1) {
+  --tool-accent: var(--block-blue);
+}
+
+.digitalToolsGrid > :nth-child(2) {
+  --tool-accent: var(--block-green);
+}
+
+.digitalToolsGrid > :nth-child(3) {
+  --tool-accent: var(--accent);
+}
+
+.digitalToolsGrid > :nth-child(4) {
+  --tool-accent: var(--block-pink);
+}
+
+.digitalToolsGrid > :nth-child(5) {
+  --tool-accent: var(--primary);
+}
+
+.digitalToolsGrid > :nth-child(6) {
+  --tool-accent: var(--secondary);
+}
+
+.digitalFlipCard {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.digitalFlipCardInner {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.digitalFlipCard[aria-pressed="true"] .digitalFlipCardInner {
+  transform: rotateY(180deg);
+}
+
+.digitalFlipCardFront,
+.digitalFlipCardBack {
+  position: relative;
+  overflow: hidden;
+  grid-area: 1 / 1;
+  display: flex;
+  height: 100%;
+  min-height: 320px;
+  padding: 28px;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: var(--shadow);
+}
+
+.digitalFlipCardFront::before,
+.digitalFlipCardBack::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 8px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--tool-accent, var(--block-blue));
+}
+
+.digitalFlipCardFront {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: border-color 0.2s ease;
+}
+
+.digitalFlipCardBack {
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.digitalFlipCardFront strong {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.digitalFlipHint {
+  position: relative;
+  z-index: 1;
+  margin-top: 12px;
+  color: var(--block-blue);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.digitalFlipCardBack strong {
+  margin-bottom: 14px;
+  color: var(--text);
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.digitalFlipCardBack > span {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.digitalFlipCard:hover .digitalFlipCardFront {
+  border-color: var(--tool-accent, var(--block-blue));
+}
+
+.digitalFlipCard:focus-visible {
+  outline: 3px solid var(--block-blue);
+  outline-offset: 4px;
+  border-radius: var(--radius);
+}
+
+.toolChoiceBlock {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--block-mint);
+}
+
+.toolChoiceBlock h3 {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 1.3rem;
+  letter-spacing: -0.025em;
+}
+
+.toolChoiceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.toolChoiceGrid > div {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.toolTask {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.toolChoiceGrid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.toolChoiceNote {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 24px;
+  border-left: 6px solid var(--block-blue);
+  border-radius: 0 16px 16px 0;
+  background: var(--primary-light);
+}
+
+.toolChoiceNote h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.toolChoiceNote p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.toolChoiceNote p:last-child {
+  margin-bottom: 0;
+}
+
+/* PRISIMINK */
+
+.summarySection {
+  width: 100%;
+  padding: 64px 24px;
+  background: var(--surface);
+}
+
+.summaryInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.summaryGrid > div {
+  --summary-accent: var(--primary);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.summaryGrid > div:nth-child(1) {
+  --summary-accent: var(--primary);
+}
+
+.summaryGrid > div:nth-child(2) {
+  --summary-accent: var(--block-blue);
+}
+
+.summaryGrid > div:nth-child(3) {
+  --summary-accent: var(--block-green);
+}
+
+.summaryGrid > div:nth-child(4) {
+  --summary-accent: var(--coral);
+}
+
+.summaryGrid > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 7px;
+  background: var(--summary-accent);
+}
+
+.summaryGrid span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--summary-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.summaryGrid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* PASITIKRINK */
+
+.checkSection {
+  width: 100%;
+  padding: 64px 24px;
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--secondary) 100%
+  );
+}
+
+.checkSection .sectionLabel,
+.checkSection .sectionTitle,
+.checkSection .checkIntro {
+  color: var(--text);
+}
+
+.checkInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.checkIntro {
+  max-width: 760px;
+  margin: -12px 0 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.checkCard {
+  max-width: 760px;
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.checkNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--block-blue);
+  font-weight: 700;
+}
+
+.checkCard h3 {
+  margin: 0 0 20px;
+  color: var(--text);
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+.checkCard button {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.checkCard button[data-state="idle"]:hover {
+  border-color: var(--block-blue);
+  background: var(--primary-light);
+}
+
+.checkCard button[data-state="correct"] {
+  border-color: var(--block-green);
+  background: var(--secondary-light);
+  box-shadow: inset 0 0 0 1px var(--block-green);
+}
+
+.checkCard button[data-state="incorrect"] {
+  border-color: var(--block-pink);
+  background: var(--pink-light);
+  box-shadow: inset 0 0 0 1px var(--block-pink);
+}
+
+.checkCard button:focus-visible {
+  outline: 3px solid var(--block-blue);
+  outline-offset: 3px;
+}
+
+.checkCard [data-feedback] {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.checkCard [data-feedback="correct"] {
+  background: var(--secondary-light);
+  color: var(--text);
+}
+
+.checkCard [data-feedback="incorrect"] {
+  background: var(--pink-light);
+  color: var(--text);
+}
+
+.finishBlock {
+  max-width: 760px;
+  margin-top: 40px;
+  padding: 28px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.finishLabel {
+  margin: 0 0 8px;
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.finishBlock h2 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.finishBlock > p:not(.finishLabel) {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.finishLink {
+  display: inline-flex;
+  min-height: 46px;
+  margin-top: 22px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--block-blue);
+  color: var(--surface);
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.finishLink:hover {
+  background: var(--primary-dark);
+  color: var(--surface);
+  transform: translateY(-2px);
+}
+
+.finishLink:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 4px;
+}
+
+.folderTreeItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folderTreeIcon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.folderTreeFile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folderTreeFileIcon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.digitalFlipIcon {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin-bottom: 18px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.digitalFlipCard:hover .digitalFlipIcon {
+  transform: translateY(-3px) scale(1.04);
+}
+
+.toolPracticeCard {
+  display: flex;
+  height: 100%;
+  padding: 24px;
+  flex-direction: column;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.toolPracticeTask {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.toolPracticeOptions {
+  display: grid;
+  gap: 10px;
+  margin-top: 28px;
+  padding-bottom: 24px;
+}
+
+.toolPracticeOptions button {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.toolPracticeOptions button[data-state="idle"]:hover {
+  border-color: var(--block-blue);
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.toolPracticeOptions button[data-state="correct"] {
+  border-color: var(--block-green);
+  background: var(--secondary-light);
+  box-shadow: inset 0 0 0 1px var(--block-green);
+}
+
+.toolPracticeOptions button[data-state="incorrect"] {
+  border-color: var(--block-pink);
+  background: var(--pink-light);
+  box-shadow: inset 0 0 0 1px var(--block-pink);
+}
+
+.toolPracticeFeedback {
+  margin: 0;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.toolPracticeFeedback[data-feedback="correct"] {
+  background: var(--secondary-light);
+  color: var(--text);
+}
+
+.toolPracticeFeedback[data-feedback="incorrect"] {
+  background: var(--pink-light);
+  color: var(--text);
+}
+
+/* TABLET */
+
+@media (min-width: 640px) {
+  .learningGrid,
+  .fileTypesGrid,
+  .managementGrid,
+  .digitalToolsGrid,
+  .summaryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .namingExamples {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 801px) {
+  .hero {
+    padding: 64px 24px;
+  }
+
+  .heroInner {
+    max-width: var(--wide-width);
+    grid-template-columns: minmax(0, 1.1fr) minmax(420px, 0.9fr);
+    align-items: center;
+    gap: 64px;
+  }
+
+  .heroVisual {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+
+  .heroImage {
+    max-width: 680px;
+  }
+
+  .learningSection {
+    padding: 72px 24px;
+  }
+
+  .learningGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .fileDefinition,
+  .folderBlock,
+  .compareBlock,
+  .fileTypeDefinition,
+  .fileTypesGrid,
+  .fileTypeNote,
+  .fileManagementDefinition,
+  .managementGrid,
+  .copyMoveBlock,
+  .namingBlock,
+  .folderStructureBlock,
+  .digitalToolsDefinition,
+  .digitalToolsGrid,
+  .toolChoiceBlock,
+  .toolChoiceNote {
+    width: 100%;
+    max-width: none;
+  }
+
+  .fileExample {
+    margin-left: 32px;
+  }
+
+  .fileExplanation {
+    width: calc(100% - 64px);
+    max-width: none;
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+
+  .compareBlock,
+  .copyMoveGrid,
+  .namingExamples {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fileTypesGrid,
+  .managementGrid,
+  .digitalToolsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .checkCard,
+  .finishBlock {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* MAŽIAU ANIMACIJŲ, JEI VARTOTOJAS TO PAGEIDAUJA */
+
+@media (prefers-reduced-motion: reduce) {
+  .learningCard,
+  .backLink,
+  .backToTop,
+  .digitalFlipCardInner,
+  .fileTypeFlipInner,
+  .fileTypeFlipFront,
+  .checkCard button,
+  .finishLink {
+    transition: none;
+  }
+
+  .digitalFlipCardInner,
+  .fileTypeFlipInner,
+  .digitalFlipIcon,
+  .learningCardLink .learningCard {
+    transition: none;
+  }
+
+  .digitalFlipCard:hover .digitalFlipIcon,
+  .fileTypeFlipCard:hover .fileTypeFlipFront,
+  .learningCardLink:hover .learningCard {
+    transform: none;
+  }
+}

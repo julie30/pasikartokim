@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SupportBanner() {
@@ -11,10 +12,15 @@ export default function SupportBanner() {
         <div className="support-section__content">
           <p className="section-label">Palaikyti projektą</p>
 
-          <h2 id="support-title">Padėk kurti daugiau nemokamų mokymosi veiklų</h2>
+          <h2 id="support-title">
+            Padėk kurti daugiau nemokamų mokymosi veiklų
+          </h2>
 
           <p>
-            „Pasikartokim.lt“ turinys yra ir liks nemokamas. Savanoriškas projekto palaikymas padeda kurti naujas veiklas, prižiūrėti svetainę ir palaipsniui plėsti mokymosi biblioteką.
+            „Pasikartokim.lt“ kuriamas kaip lengvai prieinama mokymosi
+            platforma. Savanoriškas projekto palaikymas padeda kurti naujas
+            temas ir veiklas, rengti mokymosi priemones bei prižiūrėti ir
+            tobulinti svetainę.
           </p>
 
           <div className="support-section__actions">
@@ -25,9 +31,18 @@ export default function SupportBanner() {
         </div>
 
         <div className="support-section__visual" aria-hidden="true">
-          <span>💛</span>
+          <div className="support-section__heart">
+            <Image
+              src="/images/icons/sirdis.png"
+              alt=""
+              width={64}
+              height={64}
+            />
+          </div>
+
           <strong>Kiekvienas žingsnis padeda augti</strong>
-          <p>Daugiau užduočių. Daugiau klasių. Daugiau mokymosi džiaugsmo.</p>
+
+          <p>Daugiau temų. Daugiau veiklų. Daugiau galimybių mokytis.</p>
         </div>
       </div>
     </section>

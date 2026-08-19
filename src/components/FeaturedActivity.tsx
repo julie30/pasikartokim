@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./FeaturedActivity.module.css";
 
@@ -9,21 +10,21 @@ export default function FeaturedActivity() {
     >
       <div className={styles.container}>
         <div className={styles.heading}>
-          <p className={styles.eyebrow}>Nauja nemokama veikla</p>
+          <p className={styles.eyebrow}>Rekomenduojama veikla</p>
 
-          <h2 id="featured-activity-title">
-            Mokykis saugiai elgtis internete
-          </h2>
+          <h2 id="featured-activity-title">Mokykis saugiai elgtis internete</h2>
 
           <p>
-            Išnagrinėk tikroviškas interneto situacijas, pasirink,
-            kaip elgtumeisi, ir sužinok, kaip atpažinti apgavystes.
+            Išnagrinėk tikroviškas interneto situacijas, pasirink, kaip
+            elgtumeisi, ir sužinok, kaip atpažinti apgavystes.
           </p>
         </div>
 
         <article className={styles.card}>
           <div className={styles.visual} aria-hidden="true">
-            <span className={styles.icon}>🔎</span>
+            <span className={styles.icon} aria-hidden="true">
+              <Image src="/images/icons/paieska.png" alt="" width={64} height={64} />
+            </span>
             <span className={styles.visualText}>
               Sustok.
               <br />
@@ -43,9 +44,9 @@ export default function FeaturedActivity() {
             <h3>Ar atpažintum internetinę apgavystę?</h3>
 
             <p className={styles.description}>
-              Interaktyvi veikla apie netikrus prizus, įtartinas
-              nuorodas, paskyrų vagystes, melagingus pinigų prašymus
-              ir nepatikimą informaciją.
+              Interaktyvi veikla apie netikrus prizus, įtartinas nuorodas,
+              paskyrų vagystes, melagingus pinigų prašymus ir nepatikimą
+              informaciją.
             </p>
 
             <ul className={styles.skills}>
@@ -62,9 +63,7 @@ export default function FeaturedActivity() {
               <span aria-hidden="true">→</span>
             </Link>
 
-            <p className={styles.note}>
-              Nemokama · Registracija nereikalinga
-            </p>
+            <p className={styles.note}>Nemokama · Registracija nereikalinga</p>
           </div>
         </article>
       </div>

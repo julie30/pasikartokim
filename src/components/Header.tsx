@@ -46,12 +46,12 @@ export default function Header() {
           className={`site-header__nav ${isMenuOpen ? "site-header__nav--open" : ""}`}
           aria-label="Pagrindinė navigacija"
         >
-          <Link href="/#biblioteka" onClick={closeMenu}>
-            Mokymosi biblioteka
-          </Link>
-
           <Link href="/#klases" onClick={closeMenu}>
             Klasės
+          </Link>
+
+          <Link href="/#biblioteka" onClick={closeMenu}>
+            Mokymosi priemonės
           </Link>
 
           <Link

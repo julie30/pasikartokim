@@ -6,7 +6,6 @@ import GradeSelector from "@/components/GradeSelector";
 import HowItWorks from "@/components/HowItWorks";
 import Benefits from "@/components/Benefits";
 import SupportBanner from "@/components/SupportBanner";
-import FuturePlan from "@/components/FuturePlan";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 
@@ -17,13 +16,12 @@ export default function Home() {
 
       <main id="top">
         <Hero />
+        <GradeSelector />
         <FeaturedActivity />
         <LearningLibrary />
-        <GradeSelector />
         <HowItWorks />
         <Benefits />
         <SupportBanner />
-        <FuturePlan />
       </main>
 
       <Footer />

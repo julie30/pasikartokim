@@ -2,22 +2,26 @@ const steps = [
   {
     number: "1",
     title: "Pasirink klasę",
-    description: "Pradėk nuo savo klasės arba pakartok ankstesnių klasių temas.",
+    description:
+      "Pradėk nuo savo klasės arba grįžk prie ankstesnių klasių temų, kurias nori pakartoti.",
   },
   {
     number: "2",
-    title: "Mokykis laisvai",
-    description: "Užduotis ir PDF lapus galima peržiūrėti be prisijungimo.",
+    title: "Pasirink temą",
+    description:
+      "Rask norimą dalyką, temą ar veiklą ir mokykis savo tempu.",
   },
   {
     number: "3",
-    title: "Sek progresą",
-    description: "Ateityje prisijungęs mokinys galės matyti savo lygius ir pasiekimus.",
+    title: "Mokykis ir praktikuokis",
+    description:
+      "Skaityk paaiškinimus, atlik įvairaus sudėtingumo užduotis ir išbandyk interaktyvias veiklas.",
   },
   {
     number: "4",
-    title: "Prisijunk prie klasės",
-    description: "Ateityje mokytojos pakvietimu mokinys galės prisijungti prie klasės.",
+    title: "Pasitikrink ir pakartok",
+    description:
+      "Pasitikrink, ką jau supranti, pastebėk, kur dar reikia praktikos, ir grįžk prie sunkesnių vietų.",
   },
 ];
 
@@ -28,10 +32,13 @@ export default function HowItWorks() {
         <p className="section-label">Kaip veikia?</p>
 
         <div className="how-section__header">
-          <h2 id="how-title">Mokytis galima taip, kaip patogiausia</h2>
+          <h2 id="how-title">
+            Mokymosi kelias paprastas
+          </h2>
 
           <p>
-            Pasikartokim.lt šiuo metu galima naudoti be prisijungimo. Ateityje mokiniai galės sekti savo progresą ir prisijungti prie mokytojos klasės.
+            Pasikartokim.lt gali naudoti be prisijungimo.
+            Pasirink, ką nori mokytis ar pakartoti, ir judėk savo tempu.
           </p>
         </div>
 

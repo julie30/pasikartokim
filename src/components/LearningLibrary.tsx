@@ -1,42 +1,36 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const resources = [
   {
-    title: "PDF užduotys",
-    description: "Atsisiųsk užduočių lapus ir spręsk patogiai.",
-    icon: "📄",
-  },
-  {
-    title: "Teorijos lapai",
-    description: "Trumpi paaiškinimai prieš atliekant užduotis.",
-    icon: "📘",
-  },
-  {
-    title: "Interaktyvios užduotys",
+    title: "Testai ir pasitikrinimai",
     description:
-      "Atlik interaktyvias veiklas, iš karto gauk paaiškinimus ir sužinok savo rezultatą.",
-    icon: "🧩",
+      "Atlik diagnostines ir kartojimo užduotis, pasitikrink žinias ir iš karto sužinok rezultatą.",
+    icon: "/images/icons/testai.png",
+    iconAlt: "",
     href: "/veiklos",
-    action: "Atidaryti veiklas",
-    badge: "Nauja",
+    action: "Atidaryti testus",
   },
   {
-    title: "Žaidybiniai lygiai",
+    title: "PDF mokymosi priemonės",
     description:
-      "Mokymosi kelias su lygiais, misijomis ir žvaigždutėmis.",
-    icon: "⭐",
+      "Atsisiųsk užduočių, kartojimo ir mokymosi lapus, kuriuos gali naudoti ekrane arba atsispausdinti.",
+    icon: "/images/icons/pdf-priemones.png",
+    iconAlt: "",
   },
   {
-    title: "Kūrybinės misijos",
+    title: "Kūrybinės užduotys",
     description:
-      "Užduotys, kuriose galima kurti, piešti, stebėti ir tyrinėti.",
-    icon: "🎨",
+      "Kurk, tyrinėk, stebėk ir pritaikyk žinias atlikdamas praktines bei kūrybines užduotis.",
+    icon: "/images/icons/kurybines-uzduotys.png",
+    iconAlt: "",
   },
   {
-    title: "Gamtos stebėjimai",
+    title: "Mokytojams",
     description:
-      "Orų, augalų ir aplinkos stebėjimo užduotys.",
-    icon: "🌿",
+      "Mokymui skirtos priemonės, užduočių lapai, veiklų idėjos ir kita medžiaga pamokoms.",
+    icon: "/images/icons/mokytojams.png",
+    iconAlt: "",
   },
 ];
 
@@ -48,11 +42,9 @@ export default function LearningLibrary() {
       aria-labelledby="library-title"
     >
       <div className="section-inner">
-        <p className="section-label">Mokymosi biblioteka</p>
+        <p className="section-label">Mokymosi priemonės</p>
 
-        <h2 id="library-title">
-          Pasirink, kaip nori mokytis šiandien
-        </h2>
+        <h2 id="library-title">Pasirink, kas domina</h2>
 
         <div className="learning-library__grid">
           {resources.map((resource) => {
@@ -63,17 +55,13 @@ export default function LearningLibrary() {
                   href={resource.href}
                   key={resource.title}
                 >
-                  {resource.badge && (
-                    <span className="resource-card__badge">
-                      {resource.badge}
-                    </span>
-                  )}
-
-                  <span
-                    className="resource-card__icon"
-                    aria-hidden="true"
-                  >
-                    {resource.icon}
+                  <span className="resource-card__icon" aria-hidden="true">
+                    <Image
+                      src={resource.icon}
+                      alt={resource.iconAlt}
+                      width={44}
+                      height={44}
+                    />
                   </span>
 
                   <h3>{resource.title}</h3>
@@ -89,24 +77,19 @@ export default function LearningLibrary() {
             }
 
             return (
-              <article
-                className="resource-card"
-                key={resource.title}
-              >
-                <span
-                  className="resource-card__icon"
-                  aria-hidden="true"
-                >
-                  {resource.icon}
+              <article className="resource-card" key={resource.title}>
+                <span className="resource-card__icon" aria-hidden="true">
+                  <Image
+                    src={resource.icon}
+                    alt={resource.iconAlt}
+                    width={44}
+                    height={44}
+                  />
                 </span>
 
                 <h3>{resource.title}</h3>
 
                 <p>{resource.description}</p>
-
-                <span className="resource-card__status">
-                  Ruošiama
-                </span>
               </article>
             );
           })}

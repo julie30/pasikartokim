@@ -443,7 +443,7 @@ li + li {
   }
 
   .hero-section__label {
-    color: var(--text);
+    color: var(--primary-light);
   }
 
   .hero-section h1 {
@@ -451,7 +451,7 @@ li + li {
   }
 
   .hero-section__text {
-    color: var(--text);
+    color: var(--accent-light);
   }
 
   .hero-section__actions {

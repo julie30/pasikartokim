@@ -1,33 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SupportIdeaForm from "@/components/SupportIdeaForm";
 import styles from "./palaikyti-projekta.module.css";
 
 export const metadata: Metadata = {
   title: "Palaikyti projektą | Pasikartokim.lt",
   description:
-    "Sužinokite, kaip galima palaikyti nemokamą vaikų mokymosi projektą Pasikartokim.lt.",
+    "Sužinokite, kaip galite prisidėti prie Pasikartokim.lt mokymosi platformos kūrimo.",
 };
 
 const supportWays = [
   {
-    icon: "📣",
+    icon: "/images/icons/pasidalinti.png",
     title: "Pasidalyti projektu",
     description:
-      "Papasakokite apie „Pasikartokim.lt“ kitiems tėvams, mokytojams ir vaikams.",
+      "Papasakokite apie „Pasikartokim.lt“ kitiems tėvams, mokytojams ir mokiniams.",
   },
   {
-    icon: "📝",
+    icon: "/images/icons/pranesti-klaida.png",
     title: "Pranešti apie klaidą",
     description:
-      "Pastebėta turinio ar techninė klaida padeda svetainę padaryti tikslesnę ir patogesnę.",
-  },
-  {
-    icon: "💡",
-    title: "Pasiūlyti veiklos temą",
-    description:
-      "Idėjos padeda suprasti, kokių nemokamų veiklų vaikams šiuo metu labiausiai trūksta.",
+      "Pastebėjote turinio ar techninę klaidą? Parašykite mums ir padėkite svetainę padaryti tikslesnę bei patogesnę.",
+    email: "labas@pasikartokim.lt",
   },
 ];
 
@@ -41,21 +38,13 @@ export default function PalaikytiProjektaPage() {
           <div className={styles.heroContent}>
             <p className={styles.eyebrow}>Palaikyti projektą</p>
 
-            <h1>Padėkite kurti daugiau nemokamų mokymosi veiklų</h1>
+            <h1>Padėkite Pasikartokim.lt augti</h1>
 
             <p className={styles.intro}>
-              „Pasikartokim.lt“ kuriamas tam, kad vaikai galėtų
-              nemokamai mokytis, kartoti žinias ir stiprinti
-              praktinius gebėjimus.
+              Prie projekto galite prisidėti ne tik finansiškai. Pasidalinkite
+              svetaine, praneškite apie pastebėtas klaidas arba pasiūlykite
+              temas ir veiklas, kurių norėtumėte rasti Pasikartokim.lt.
             </p>
-
-            <div className={styles.promise}>
-              <span aria-hidden="true">💛</span>
-
-              <p>
-                Svetainės veiklos yra ir liks nemokamos.
-              </p>
-            </div>
           </div>
         </section>
 
@@ -66,49 +55,31 @@ export default function PalaikytiProjektaPage() {
           <div className={styles.container}>
             <p className={styles.eyebrow}>Prisidėti galima įvairiai</p>
 
-            <h2 id="support-ways-title">
-              Kaip dabar galite palaikyti projektą?
-            </h2>
+            <h2 id="support-ways-title">Kaip galite padėti projektui?</h2>
 
             <div className={styles.grid}>
               {supportWays.map((way) => (
                 <article className={styles.card} key={way.title}>
                   <span className={styles.icon} aria-hidden="true">
-                    {way.icon}
+                    <Image src={way.icon} alt="" width={68} height={68} />
                   </span>
 
                   <h3>{way.title}</h3>
 
                   <p>{way.description}</p>
+
+                  {way.email && (
+                    <a
+                      className={styles.emailLink}
+                      href={`mailto:${way.email}`}
+                    >
+                      {way.email}
+                    </a>
+                  )}
                 </article>
               ))}
-            </div>
-          </div>
-        </section>
 
-        <section className={styles.paymentSection}>
-          <div className={styles.paymentCard}>
-            <div className={styles.paymentIcon} aria-hidden="true">
-              🔒
-            </div>
-
-            <div>
-              <p className={styles.eyebrow}>
-                Finansinis projekto palaikymas
-              </p>
-
-              <h2>Mokėjimų funkcija dar ruošiama</h2>
-
-              <p>
-                Saugus mokėjimo būdas bus prijungtas vėliau.
-                Lankytojas galės pats pasirinkti atsiskaitymą per
-                banką, mokėjimo kortelę ar kitą siūlomą būdą.
-              </p>
-
-              <p className={styles.paymentNote}>
-                Šiuo metu šiame puslapyje neprašoma pateikti banko
-                kortelės, prisijungimo ar kitų mokėjimo duomenų.
-              </p>
+              <SupportIdeaForm />
             </div>
           </div>
         </section>

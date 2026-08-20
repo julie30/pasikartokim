@@ -19,7 +19,7 @@ const activities = [
     age: "5 klasė",
     duration: "10–15 min.",
     situations: "12 užduočių",
-    href: "/veiklos/5-klase/informatika/ka-jau-moku",
+    href: "/5-klase/informatika/ka-jau-moku",
     category: "Informatika",
   },
 

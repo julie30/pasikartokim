@@ -181,7 +181,7 @@
   border: 0;
   border-radius: 999px;
   background: var(--primary);
-  color: #ffffff;
+  color: var(--surface);
   font: inherit;
   font-weight: 900;
   cursor: pointer;
@@ -287,7 +287,7 @@
   padding: 18px 20px;
   border: 2px solid var(--border);
   border-radius: 18px;
-  background: #ffffff;
+  background: var(--surface);
   color: var(--text);
   text-align: left;
   font: inherit;
@@ -374,7 +374,7 @@
   border: 0;
   border-radius: 999px;
   background: var(--primary-dark);
-  color: #ffffff;
+  color: var(--surface);
   font: inherit;
   font-weight: 900;
   cursor: pointer;
@@ -407,7 +407,7 @@
   gap: 14px;
   border: 2px solid var(--border);
   border-radius: 18px;
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .orderingNumber {
@@ -438,7 +438,7 @@
   place-items: center;
   border: 2px solid var(--border);
   border-radius: 12px;
-  background: #ffffff;
+  background: var(--surface);
   color: var(--primary-dark);
   font: inherit;
   font-size: 1.1rem;
@@ -466,7 +466,7 @@
   border: 0;
   border-radius: 999px;
   background: var(--primary);
-  color: #ffffff;
+  color: var(--surface);
   font: inherit;
   font-weight: 900;
   cursor: pointer;
@@ -513,7 +513,7 @@
   overflow: hidden;
   border: 2px solid var(--primary-dark);
   border-radius: 18px;
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .gridCell {
@@ -523,7 +523,7 @@
   place-items: center;
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .startCell {
@@ -557,7 +557,7 @@
     var(--primary-dark),
     var(--primary)
   );
-  color: #ffffff;
+  color: var(--surface);
   font-size: 2rem;
   font-weight: 900;
   line-height: 1;
@@ -695,7 +695,7 @@
   padding: 0;
   border: 2px solid var(--border);
   border-radius: 20px;
-  background: #ffffff;
+  background: var(--surface);
   color: var(--text);
   text-align: left;
   font: inherit;

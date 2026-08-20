@@ -1,7 +1,9 @@
 .main {
   min-height: 100vh;
-  background: #ffffff;
+  background: var(--surface);
 }
+
+/* HERO */
 
 .hero {
   width: 100%;
@@ -17,12 +19,11 @@
       rgba(0, 211, 156, 0.15),
       transparent 30%
     ),
-    #f7fcfb;
+    var(--primary-light);
 }
 
 .heroContent,
 .container,
-.paymentSection,
 .actionsSection {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
@@ -34,60 +35,44 @@
 
 .eyebrow {
   margin: 0 0 12px;
-  color: #007d88;
-  font-size: 0.8rem;
+  color: var(--primary-dark);
+  font-size: 0.76rem;
   font-weight: 900;
-  letter-spacing: 0.1em;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .hero h1 {
   max-width: 900px;
   margin: 0 0 22px;
-  color: #021b24;
+  color: var(--text);
   font-size: clamp(2.5rem, 6vw, 4.6rem);
   line-height: 1.02;
   letter-spacing: -0.05em;
 }
 
 .intro {
-  max-width: 720px;
-  margin: 0 0 28px;
-  color: #4f5761;
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
   font-size: 1.1rem;
   line-height: 1.75;
 }
 
-.promise {
-  display: inline-flex;
-  padding: 15px 20px;
-  align-items: center;
-  gap: 12px;
-  border-radius: 18px;
-  background: #ffffff;
-  box-shadow: 0 12px 28px rgba(16, 42, 67, 0.09);
-}
-
-.promise span {
-  font-size: 1.55rem;
-}
-
-.promise p {
-  margin: 0;
-  color: #021b24;
-  font-weight: 900;
-}
+/* PALAIKYMO BŪDAI */
 
 .supportSection {
   width: 100%;
   padding: 78px 0;
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .supportSection h2 {
   max-width: 760px;
   margin: 0 0 32px;
-  color: #021b24;
+  color: var(--text);
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.08;
   letter-spacing: -0.04em;
@@ -95,95 +80,310 @@
 
 .grid {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
 .card {
+  min-width: 0;
   padding: 28px;
-  border: 1px solid rgba(16, 42, 67, 0.11);
-  border-radius: 24px;
-  background: #ffffff;
-  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.07);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
 .icon {
   display: grid;
-  width: 62px;
-  height: 62px;
+  width: 72px;
+  height: 72px;
   margin-bottom: 22px;
   place-items: center;
-  border-radius: 20px;
-  background: #f1fcfe;
-  font-size: 1.8rem;
+  background: transparent;
+}
+
+.icon img {
+  display: block;
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
 }
 
 .card h3 {
   margin: 0 0 10px;
-  color: #021b24;
+  color: var(--text);
   font-size: 1.35rem;
+  line-height: 1.2;
 }
 
 .card p {
   margin: 0;
-  color: #4f5761;
+  color: var(--muted);
   line-height: 1.7;
 }
 
-.paymentSection {
-  padding: 0 0 72px;
+/* EL. PAŠTAS */
+
+.emailLink {
+  display: inline-flex;
+  margin-top: 16px;
+  color: var(--primary-dark);
+  font-weight: 900;
+  overflow-wrap: anywhere;
 }
 
-.paymentCard {
+.emailLink:hover {
+  text-decoration: underline;
+}
+
+.emailLink:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* PASIŪLYMO KORTELĖ */
+
+.ideaCard {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  overflow: hidden;
+}
+
+.ideaCardOpen {
+  padding: 0;
+}
+
+.ideaContent {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ideaCardOpen .ideaContent {
+  padding: 28px;
+}
+
+.ideaContent .icon {
+  flex-shrink: 0;
+}
+
+.ideaContent h3 {
+  margin: 0 0 10px;
+}
+
+.ideaContent p {
+  margin-bottom: 22px;
+}
+
+.ideaButton {
+  display: inline-flex;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--surface);
+  font-weight: 900;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ideaButton:hover {
+  border-color: var(--primary-dark);
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.ideaButton:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* FORMA */
+
+.ideaForm {
   display: grid;
-  padding: 30px;
-  gap: 24px;
-  border: 1px solid rgba(16, 42, 67, 0.1);
-  border-radius: 28px;
-  background:
-    radial-gradient(
-      circle at 100% 0%,
-      rgba(253, 223, 3, 0.24),
-      transparent 32%
-    ),
-    #fffdf2;
-  box-shadow: 0 16px 38px rgba(16, 42, 67, 0.08);
+  gap: 22px;
+  padding: 28px;
+  border-top: 1px solid var(--border);
+  background: var(--surface-soft);
 }
 
-.paymentIcon {
+.field {
   display: grid;
-  width: 68px;
-  height: 68px;
-  place-items: center;
-  border-radius: 22px;
-  background: #fddf03;
-  font-size: 2rem;
+  gap: 8px;
 }
 
-.paymentCard h2 {
-  margin: 0 0 12px;
-  color: #021b24;
-  font-size: clamp(1.7rem, 4vw, 2.4rem);
-  line-height: 1.15;
+.field label,
+.contactFieldset legend {
+  color: var(--text);
+  font-weight: 900;
 }
 
-.paymentCard p {
-  max-width: 760px;
+.optional {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  outline: 0;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field input {
+  min-height: 48px;
+}
+
+.field textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(0, 177, 193, 0.14);
+}
+
+/* KONTAKTAVIMO BŪDAS */
+
+.contactFieldset {
+  display: grid;
+  gap: 14px;
   margin: 0;
-  color: #4f5761;
-  line-height: 1.7;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
 }
 
-.paymentNote {
-  margin-top: 18px !important;
+.contactFieldset legend {
+  padding: 0 6px;
+}
+
+.contactFieldset > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.contactOptions {
+  display: grid;
+  gap: 10px;
+}
+
+.contactOptions label {
+  display: flex;
+  min-height: 48px;
+  padding: 10px 14px;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.contactOptions label:has(input:checked) {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.contactOptions input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+/* SIŲSTI */
+
+.submitButton {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 50px;
+  padding: 0 24px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--surface);
+  font-weight: 900;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.submitButton:hover {
+  border-color: var(--primary-dark);
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.submitButton:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.submitButton:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
+}
+
+/* SIUNTIMO BŪSENA */
+
+.formSuccess,
+.formError {
+  margin: 0;
   padding: 14px 16px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.8);
-  color: #43515d !important;
-  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
+.formSuccess {
+  background: var(--secondary-light);
+  color: var(--text);
+}
+
+.formError {
+  background: var(--pink-light);
+  color: var(--text);
+}
+
+/* APATINIAI VEIKSMAI */
+
 .actionsSection {
-  padding-bottom: 80px;
+  padding: 0 0 80px;
 }
 
 .actions {
@@ -203,18 +403,20 @@
   font-weight: 900;
   transition:
     transform 0.2s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .primaryButton {
-  background: #00b1c1;
-  color: #ffffff;
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: var(--surface);
 }
 
 .secondaryButton {
-  border: 2px solid rgba(16, 42, 67, 0.12);
-  background: #ffffff;
-  color: #021b24;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
 }
 
 .primaryButton:hover,
@@ -223,19 +425,25 @@
 }
 
 .primaryButton:hover {
-  background: #0184b8;
+  border-color: var(--primary-dark);
+  background: var(--primary-dark);
+}
+
+.secondaryButton:hover {
+  border-color: var(--primary);
 }
 
 .primaryButton:focus-visible,
 .secondaryButton:focus-visible {
-  outline: 4px solid rgba(0, 177, 193, 0.25);
+  outline: 3px solid var(--accent);
   outline-offset: 4px;
 }
+
+/* TABLET */
 
 @media (min-width: 700px) {
   .heroContent,
   .container,
-  .paymentSection,
   .actionsSection {
     width: min(1180px, calc(100% - 64px));
   }
@@ -248,28 +456,76 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .paymentCard {
-    grid-template-columns: auto minmax(0, 1fr);
-    padding: 38px;
-    align-items: start;
+  .contactOptions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ideaCardOpen {
+    grid-column: 1 / -1;
+  }
+
+  .ideaForm {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contactFieldset,
+  .field:has(textarea),
+  .submitButton,
+  .formSuccess,
+  .formError {
+    grid-column: 1 / -1;
   }
 }
+
+/* MOBILE */
 
 @media (max-width: 560px) {
   .hero {
     padding: 48px 0;
   }
 
+  .hero h1 {
+    font-size: clamp(2.2rem, 11vw, 3.1rem);
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
   .supportSection {
     padding: 58px 0;
+  }
+
+  .supportSection h2 {
+    margin-bottom: 26px;
   }
 
   .card {
     padding: 24px;
   }
 
-  .paymentCard {
+  .ideaCard {
     padding: 24px;
+  }
+
+  .ideaCardOpen {
+    padding: 0;
+  }
+
+  .ideaCardOpen .ideaContent {
+    padding: 24px;
+  }
+
+  .ideaForm {
+    padding: 24px;
+  }
+
+  .contactFieldset {
+    padding: 16px;
+  }
+
+  .submitButton {
+    width: 100%;
   }
 
   .actions {

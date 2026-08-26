@@ -556,65 +556,66 @@ export default function FailaiIrSkaitmeninesPriemonesPage() {
             />
           </div>
           <div className={styles.toolChoiceBlock}>
-            <h3>Kokią priemonę pasirinkti?</h3>
+            <h3><strong>Testas. Kokią priemonę pasirinkti?</strong></h3>
+            <p>Pasirink tinkamą programą.</p>
 
             <div className={styles.toolChoiceGrid}>
               <ToolChoiceCard
-                task="Reikia parašyti referatą"
+                task="1. Reikia parašyti referatą"
                 options={[
-                  "Teksto rengyklė",
-                  "Skaičiuoklė",
-                  "Interneto naršyklė",
+                  "a) Teksto rengyklė",
+                  "b) Skaičiuoklė",
+                  "c) Interneto naršyklė",
                 ]}
                 correctIndex={0}
               />
 
               <ToolChoiceCard
-                task="Reikia pristatyti projektą klasei"
+                task="2. Reikia pristatyti projektą klasei"
                 options={[
-                  "Pateikčių programa",
-                  "Skaičiuoklė",
-                  "Bendravimo priemonė",
+                  "a) Pateikčių programa",
+                  "b) Skaičiuoklė",
+                  "c) Bendravimo priemonė",
                 ]}
                 correctIndex={0}
               />
 
               <ToolChoiceCard
-                task="Reikia suskaičiuoti apklausos rezultatus"
+                task="3. Reikia suskaičiuoti apklausos rezultatus"
                 options={[
-                  "Piešimo ar vaizdų redagavimo programa",
-                  "Skaičiuoklė",
-                  "Teksto rengyklė",
+                  "a) Piešimo ar vaizdų redagavimo programa",
+                  "b) Skaičiuoklė",
+                  "c) Teksto rengyklė",
                 ]}
                 correctIndex={1}
               />
 
               <ToolChoiceCard
-                task="Reikia nupiešti plakato iliustraciją"
+                task="4. Reikia nupiešti plakato iliustraciją"
                 options={[
-                  "Interneto naršyklė",
-                  "Pateikčių programa",
-                  "Piešimo ar vaizdų redagavimo programa",
+                  "a) Interneto naršyklė",
+                  "b) Pateikčių programa",
+                  "c) Piešimo ar vaizdų redagavimo programa",
                 ]}
                 correctIndex={2}
               />
 
               <ToolChoiceCard
-                task="Reikia rasti informacijos internete"
+                task="5. Reikia rasti informacijos internete"
                 options={[
-                  "Interneto naršyklė",
-                  "Skaičiuoklė",
-                  "Teksto rengyklė",
+                  "a) Interneto naršyklė",
+                  "b) Skaičiuoklė",
+                  "c) Teksto rengyklė",
                 ]}
                 correctIndex={0}
               />
 
               <ToolChoiceCard
-                task="Reikia pasikalbėti su klasės draugu nuotoliu"
+                task="6. Reikia pasikalbėti su klasės draugu nuotoliu"
                 options={[
-                  "Pateikčių programa",
-                  "Bendravimo priemonė",
-                  "Skaičiuoklė",
+                  "a) Pateikčių programa",
+                  "b) Bendravimo priemonė",
+                  "c) Skaičiuoklė",
                 ]}
                 correctIndex={1}
               />

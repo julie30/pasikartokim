@@ -31,7 +31,7 @@ export default function GradeSelector() {
               return (
                 <Link
                   className="grade-bubble grade-bubble--active"
-                  href="/5-klase/informatika"
+                  href="/5-klase/"
                   key={grade}
                   aria-label="5 klasė – atidaryti mokymosi turinį"
                 >

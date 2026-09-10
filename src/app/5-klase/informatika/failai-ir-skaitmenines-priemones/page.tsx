@@ -23,7 +23,7 @@ export default function FailaiIrSkaitmeninesPriemonesPage() {
               ← Grįžti į 5 klasės informatiką
             </Link>
 
-            <p className={styles.eyebrow}>5 klasė · Informatika</p>
+            <p className={styles.eyebrow}>5 klasė · Informatika · 1 TEMA</p>
 
             <h1 className={styles.heroTitle}>
               Failai ir skaitmeninės priemonės

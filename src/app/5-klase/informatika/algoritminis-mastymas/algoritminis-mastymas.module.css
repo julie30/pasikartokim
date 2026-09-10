@@ -1,0 +1,1011 @@
+.page {
+  width: 100%;
+}
+
+/* HERO */
+
+.hero {
+  width: 100%;
+  padding: 48px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--block-blue) 0%,
+    var(--primary) 100%
+  );
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  width: 100%;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--block-mint);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+.backLink:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  max-width: 760px;
+  margin: 0 0 20px;
+  color: var(--surface);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.heroDescription {
+  max-width: 720px;
+  margin: 0;
+  color: var(--block-mint);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+}
+
+/* HERO ALGORITMO VIZUALAS */
+
+.algorithmPreview {
+  display: flex;
+  width: min(100%, 360px);
+  padding: 28px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.previewStart,
+.previewStep,
+.previewFinish {
+  display: flex;
+  width: 100%;
+  min-height: 54px;
+  padding: 12px 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  color: var(--text);
+  font-weight: 800;
+  text-align: center;
+}
+
+.previewStart {
+  background: var(--secondary-light);
+}
+
+.previewStep {
+  background: var(--primary-light);
+}
+
+.previewFinish {
+  background: var(--accent-light);
+}
+
+.previewArrow {
+  color: var(--block-blue);
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+/* BENDROS ANTRAŠTĖS */
+
+.sectionLabel {
+  margin: 0 0 10px;
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  margin: 0 0 32px;
+  color: var(--text);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+/* KO IŠMOKSI */
+
+.learningSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 20px;
+  background: var(--surface);
+}
+
+.learningGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.learningCardLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.learningCard {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.learningCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 7px;
+  background: var(--card-accent, var(--primary));
+}
+
+.learningCardLink:nth-child(1) {
+  --card-accent: var(--accent);
+}
+
+.learningCardLink:nth-child(2) {
+  --card-accent: var(--block-blue);
+}
+
+.learningCardLink:nth-child(3) {
+  --card-accent: var(--block-green);
+}
+
+.learningCardLink:nth-child(4) {
+  --card-accent: var(--block-pink);
+}
+
+.learningCardLink:hover .learningCard {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.learningCardLink:nth-child(1):hover .learningCard {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.learningCardLink:nth-child(2):hover .learningCard {
+  border-color: var(--block-blue);
+  background: var(--primary-light);
+}
+
+.learningCardLink:nth-child(3):hover .learningCard {
+  border-color: var(--block-green);
+  background: var(--secondary-light);
+}
+
+.learningCardLink:nth-child(4):hover .learningCard {
+  border-color: var(--block-pink);
+  background: var(--pink-light);
+}
+
+.learningCardLink:focus-visible {
+  outline: 3px solid var(--block-blue);
+  outline-offset: 4px;
+  border-radius: 20px;
+}
+
+.cardNumber {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--card-accent, var(--block-blue));
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.cardTitle {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.cardDescription {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* BENDRA PAMOKOS STRUKTŪRA */
+
+.lessonSection {
+  width: 100%;
+  padding: 72px 24px;
+  scroll-margin-top: 90px;
+}
+
+.lessonInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lessonHeading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.lessonNumber {
+  color: var(--block-blue);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.lessonHeading h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.definitionCard {
+  max-width: 760px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.definitionCard h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.4rem;
+  letter-spacing: -0.025em;
+}
+
+.definitionCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.backToTop {
+  display: inline-block;
+  margin-top: 40px;
+  color: var(--muted);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backToTop:hover {
+  color: var(--block-blue);
+}
+
+.backToTop:focus-visible {
+  outline: 3px solid var(--block-blue);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* 01 VEIKSMŲ SEKA */
+
+.sequenceSection {
+  background: var(--accent-light);
+}
+
+.sequenceSection .lessonNumber {
+  color: var(--primary-dark);
+}
+
+/* 02 KOMANDOS */
+
+.commandsSection {
+  background: var(--primary-light);
+}
+
+.commandsSection .lessonNumber {
+  color: var(--block-blue);
+}
+
+/* 03 KARTOJIMAS */
+
+.repetitionSection {
+  background: var(--secondary-light);
+}
+
+.repetitionSection .lessonNumber {
+  color: var(--block-green);
+}
+
+/* 04 KLAIDŲ PAIEŠKA */
+
+.debuggingSection {
+  background: var(--pink-light);
+}
+
+.debuggingSection .lessonNumber {
+  color: var(--block-pink);
+}
+
+/* PRISIMINK */
+
+.summarySection {
+  width: 100%;
+  padding: 64px 24px;
+  background: var(--surface);
+}
+
+.summaryInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.summaryGrid > div {
+  --summary-accent: var(--primary);
+
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.summaryGrid > div:nth-child(1) {
+  --summary-accent: var(--accent);
+}
+
+.summaryGrid > div:nth-child(2) {
+  --summary-accent: var(--block-blue);
+}
+
+.summaryGrid > div:nth-child(3) {
+  --summary-accent: var(--block-green);
+}
+
+.summaryGrid > div:nth-child(4) {
+  --summary-accent: var(--block-pink);
+}
+
+.summaryGrid > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 7px;
+  background: var(--summary-accent);
+}
+
+.summaryGrid span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--summary-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.summaryGrid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* PASITIKRINK */
+
+.checkSection {
+  width: 100%;
+  padding: 64px 24px;
+  background: var(--primary-light);
+}
+
+.checkInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.checkIntro {
+  max-width: 760px;
+  margin: -12px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* 01 VEIKSMŲ SEKOS TURINYS */
+
+.sequenceExample,
+.orderBlock,
+.thinkTask {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.sequenceExampleText h3,
+.orderBlock h3,
+.thinkTask h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.3rem;
+  letter-spacing: -0.025em;
+}
+
+.sequenceExampleText > p:not(.smallLabel),
+.thinkTask > p:not(.smallLabel):not(.taskHint) {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.smallLabel {
+  margin: 0 0 8px;
+  color: var(--primary-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.stepsList {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--primary-light);
+}
+
+.stepItem span {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--block-blue);
+  color: var(--surface);
+  font-weight: 800;
+}
+
+.stepItem p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.orderCompare {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.orderGood,
+.orderBad {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.orderGood {
+  border-top: 6px solid var(--block-green);
+}
+
+.orderBad {
+  border-top: 6px solid var(--block-pink);
+}
+
+.orderBadge {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.orderGood ol,
+.orderBad ol {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.orderGood p,
+.orderBad p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.keyIdea {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 20px 22px;
+  border-left: 6px solid var(--accent);
+  border-radius: 0 16px 16px 0;
+  background: var(--accent-light);
+}
+
+.keyIdea > strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.keyIdea p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* VEIKSMŲ SEKOS INTERAKTYVI UŽDUOTIS */
+
+.sequenceTaskOptions {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.sequenceTaskOption {
+  display: flex;
+  width: 100%;
+  min-height: 58px;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sequenceTaskOption:hover:not(:disabled) {
+  border-color: var(--block-blue);
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.sequenceTaskOption[data-selected="true"] {
+  border-color: var(--block-blue);
+  background: var(--primary-light);
+}
+
+.sequenceTaskOption:disabled {
+  cursor: default;
+}
+
+.sequenceTaskOption:focus-visible {
+  outline: 3px solid var(--block-blue);
+  outline-offset: 3px;
+}
+
+.sequenceTaskNumber {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--block-blue);
+  color: var(--surface);
+  font-weight: 800;
+}
+
+.sequenceTaskProgress {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.sequenceTaskActions {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.checkTaskButton,
+.resetTaskButton {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.checkTaskButton {
+  border: 0;
+  background: var(--block-blue);
+  color: var(--surface);
+}
+
+.checkTaskButton:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.checkTaskButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.resetTaskButton {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.resetTaskButton:hover {
+  border-color: var(--block-blue);
+  background: var(--primary-light);
+}
+
+.checkTaskButton:focus-visible,
+.resetTaskButton:focus-visible {
+  outline: 3px solid var(--block-blue);
+  outline-offset: 3px;
+}
+
+.sequenceFeedback {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-radius: 14px;
+}
+
+.sequenceFeedback strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.sequenceFeedback p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.sequenceFeedback[data-feedback="correct"] {
+  border: 1px solid var(--block-green);
+  background: var(--secondary-light);
+}
+
+.sequenceFeedback[data-feedback="incorrect"] {
+  border: 1px solid var(--block-pink);
+  background: var(--pink-light);
+}
+
+/* 02 KOMANDOS TURINYS */
+
+.commandExample,
+.commandSequenceBlock,
+.precisionBlock,
+.commandTask {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.commandExample h3,
+.commandSequenceBlock h3,
+.precisionBlock h3,
+.commandTask h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.3rem;
+  letter-spacing: -0.025em;
+}
+
+.commandCompare {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.commandCompare > div {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.commandCompare > div:first-child {
+  border-top: 6px solid var(--block-pink);
+}
+
+.commandCompare > div:last-child {
+  border-top: 6px solid var(--block-green);
+}
+
+.commandLabel {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.commandCompare strong {
+  display: block;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.commandCompare p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.commandIntro,
+.commandTask > p:not(.smallLabel):not(.taskHint) {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.commandSteps {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.commandSteps > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--primary-light);
+}
+
+.commandSteps span {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--block-blue);
+  color: var(--surface);
+  font-weight: 800;
+}
+
+.commandSteps p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.commandResult {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-left: 6px solid var(--block-blue);
+  border-radius: 0 14px 14px 0;
+  background: var(--primary-light);
+}
+
+.commandResult strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.commandResult p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.commandTaskOptions {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.commandTaskOptions button {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.commandTaskOptions button:hover {
+  border-color: var(--block-blue);
+  background: var(--primary-light);
+}
+
+/* TABLET */
+
+@media (min-width: 640px) {
+  .learningGrid,
+  .summaryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 801px) {
+  .hero {
+    padding: 64px 24px;
+  }
+
+  .heroInner {
+    max-width: var(--wide-width);
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+    align-items: center;
+    gap: 64px;
+  }
+
+  .heroVisual {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+
+  .algorithmPreview {
+    width: 100%;
+    max-width: 420px;
+    padding: 36px;
+  }
+
+  .learningSection {
+    padding: 72px 24px;
+  }
+
+  .learningGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .definitionCard {
+    width: 100%;
+    max-width: none;
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sequenceExample,
+  .orderBlock,
+  .keyIdea,
+  .thinkTask {
+    width: 100%;
+    max-width: none;
+  }
+
+  .orderCompare {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .commandExample,
+  .commandSequenceBlock,
+  .precisionBlock,
+  .commandTask {
+    width: 100%;
+    max-width: none;
+  }
+
+  .commandCompare {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MAŽIAU ANIMACIJŲ */
+
+@media (prefers-reduced-motion: reduce) {
+  .learningCard,
+  .backLink,
+  .backToTop {
+    transition: none;
+  }
+
+  .learningCardLink:hover .learningCard {
+    transform: none;
+  }
+}

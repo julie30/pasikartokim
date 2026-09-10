@@ -7,16 +7,22 @@ export async function POST(request: NextRequest) {
   const previewKey = process.env.PASIKARTOKIM_PREVIEW_KEY;
 
   if (!previewKey || key !== previewKey) {
-    return NextResponse.redirect(
-      new URL("/perziura", request.url),
-      303
-    );
+    return new NextResponse(null, {
+      status: 303,
+      headers: {
+        Location: "/perziura",
+        "X-Robots-Tag": "noindex, nofollow",
+      },
+    });
   }
 
-  const response = NextResponse.redirect(
-    new URL("/", request.url),
-    303
-  );
+  const response = new NextResponse(null, {
+    status: 303,
+    headers: {
+      Location: "/",
+      "X-Robots-Tag": "noindex, nofollow",
+    },
+  });
 
   response.cookies.set("pasikartokim_preview", previewKey, {
     httpOnly: true,
@@ -25,8 +31,6 @@ export async function POST(request: NextRequest) {
     path: "/",
     maxAge: 60 * 60 * 24 * 30,
   });
-
-  response.headers.set("X-Robots-Tag", "noindex, nofollow");
 
   return response;
 }

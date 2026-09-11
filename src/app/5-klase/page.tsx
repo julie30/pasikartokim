@@ -131,7 +131,16 @@ export default function GradeFivePage() {
 
               <div className={styles.heroVisual} aria-hidden="true">
                 <div className={styles.illustrationPlaceholder}>
-                  Paveikslėlio vieta
+                  <div className={styles.heroVisual}>
+                    <Image
+                      src="/images/5-klase/dalykai/hero.png"
+                      alt="Mokinys su kuprine, apsuptas knygomis"
+                      width={500}
+                      height={500}
+                      priority
+                      className={styles.heroImage}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

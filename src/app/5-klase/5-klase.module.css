@@ -90,22 +90,11 @@
   min-height: 190px;
 }
 
-.illustrationPlaceholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: min(100%, 300px);
-  min-height: 190px;
-
-  border: 2px dashed
-    color-mix(in srgb, var(--surface) 45%, transparent);
-  border-radius: 22px;
-
-  color: color-mix(in srgb, var(--surface) 72%, transparent);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-align: center;
+.heroImage {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  object-fit: contain;
 }
 
 /* DALYKAI */
@@ -205,32 +194,12 @@
   margin: 0 auto 18px;
 
   border-radius: 18px;
-
-  background: var(--primary-light);
 }
 
 .subjectIcon img {
   width: 64px;
   height: 64px;
-  object-fit: contain;
-}
-
-/* Skirtingi ikonų fonai */
-
-.subjectCard:nth-child(4n + 1) .subjectIcon {
-  background: var(--primary-light);
-}
-
-.subjectCard:nth-child(4n + 2) .subjectIcon {
-  background: var(--accent-light);
-}
-
-.subjectCard:nth-child(4n + 3) .subjectIcon {
-  background: var(--pink-light);
-}
-
-.subjectCard:nth-child(4n) .subjectIcon {
-  background: var(--block-green);
+  object-fit: cover;
 }
 
 /* DALYKO PAVADINIMAS */
@@ -353,10 +322,6 @@
     min-height: 220px;
   }
 
-  .illustrationPlaceholder {
-    min-height: 220px;
-  }
-
   .subjectGrid {
     gap: 18px;
   }
@@ -398,11 +363,6 @@
   }
 
   .heroVisual {
-    min-height: 250px;
-  }
-
-  .illustrationPlaceholder {
-    width: min(100%, 330px);
     min-height: 250px;
   }
 
@@ -451,10 +411,6 @@
   }
 
   .heroVisual {
-    min-height: 150px;
-  }
-
-  .illustrationPlaceholder {
     min-height: 150px;
   }
 

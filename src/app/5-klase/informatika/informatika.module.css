@@ -1,5 +1,7 @@
 .page {
   min-height: 100vh;
+  background: var(--surface);
+  color: var(--text);
 }
 
 .container {
@@ -7,9 +9,39 @@
   margin: 0 auto;
 }
 
+/* =========================================================
+   HERO
+   ========================================================= */
+
 .hero {
-  padding: 72px 0 64px;
+  padding: 32px 0 56px;
   background: var(--block-blue);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+  color: var(--surface);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  opacity: 0.9;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.backLink:hover {
+  opacity: 1;
+  transform: translateX(-2px);
+}
+
+.backLink:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 .heroContent {
@@ -21,6 +53,32 @@
 
 .heroText {
   max-width: 680px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent-light);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin: 0;
+  color: var(--surface);
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.intro {
+  max-width: 640px;
+  margin: 22px 0 0;
+  color: var(--block-mint);
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
 .heroVisual {
@@ -37,7 +95,7 @@
   position: absolute;
   width: clamp(105px, 12vw, 150px);
   aspect-ratio: 1;
-  top: 0;
+  top: -8px;
   right: -8%;
   border-radius: 50%;
   background: var(--accent);
@@ -49,8 +107,8 @@
   position: absolute;
   width: clamp(85px, 9vw, 110px);
   aspect-ratio: 1;
-  bottom: -2%;
-  left: -6%;
+  bottom: -8px;
+  left: -10%;
   border-radius: 28px;
   background: var(--block-pink);
   transform: rotate(12deg);
@@ -60,497 +118,930 @@
 .heroVisual img {
   position: relative;
   z-index: 1;
-  width: min(100%, 420px);
+  width: min(100%, 400px);
   height: auto;
   border-radius: 28px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
 }
 
-@media (max-width: 800px) {
-  .heroContent {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    text-align: center;
-  }
+/* =========================================================
+   PROGRESAS
+   ========================================================= */
 
-  .heroText {
-    margin: 0 auto;
-  }
-
-  .intro {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .heroVisual {
-    justify-content: center;
-  }
-
-  .heroVisual img {
-    width: min(100%, 360px);
-  }
+.progressOverview {
+  padding: 32px 0 0;
+  background: #f7fbfc;
 }
 
-.heroVisual::before {
-  width: 110px;
-  top: 8px;
-  right: 4%;
+.overviewCard {
+  padding: 26px 28px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
-.heroVisual::after {
-  width: 95px;
-  bottom: 4px;
-  left: 6%;
+.overviewHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 16px;
 }
 
-.eyebrow {
-  margin: 0 0 12px;
-  color: var(--accent);
-  font-size: 0.95rem;
+.overviewLabel {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-size: 1.1rem;
   font-weight: 800;
 }
 
-.hero h1 {
+.overviewMeta {
   margin: 0;
-  color: var(--surface);
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.045em;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
-.intro {
-  max-width: 680px;
-  margin: 24px 0 0;
-  color: var(--block-mint);
-  font-size: 1.1rem;
-  line-height: 1.7;
+.overviewValue {
+  color: var(--primary);
+  font-size: 1.15rem;
 }
+
+.overviewBar {
+  width: 100%;
+  height: 11px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--primary-light);
+}
+
+.overviewFill {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+}
+
+/* =========================================================
+   MOKYMOSI KELIAS
+   ========================================================= */
 
 .learningPath {
-  padding: 64px 0 72px;
-  background: var(--block-mint);
+  padding: 56px 0 80px;
+  background: #f7fbfc;
 }
 
-.learningPath .sectionLabel {
-  color: var(--block-blue);
-}
-
-.learningPath h2 {
-  margin: 0 0 16px;
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-}
-
-.learningPath p {
-  max-width: 680px;
-  margin: 0 0 24px;
-  line-height: 1.7;
-}
-
-.diagnosticLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 12px 22px;
-  border-radius: 14px;
-  background: var(--block-blue);
-  color: var(--surface);
-  font-weight: 800;
-  text-decoration: none;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.diagnosticLink:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(1, 132, 184, 0.22);
-}
-
-.diagnosticLink:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
+.sectionHeading {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 32px;
 }
 
 .sectionLabel {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   padding: 7px 13px;
   border-radius: 999px;
-  font-size: 0.82rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.76rem;
   font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.learningPath h2,
+.finalChallenge h2 {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: clamp(1.8rem, 4vw, 2.55rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  width: 100%;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.sectionIntro {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* =========================================================
+   DIAGNOSTIKA
+   ========================================================= */
+
+.diagnosticCard {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 7px 22px rgba(7, 59, 76, 0.06);
+}
+
+.diagnosticNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--block-mint);
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.diagnosticContent h3 {
+  margin: 3px 0 7px;
+  font-size: 1.22rem;
+  letter-spacing: -0.02em;
+}
+
+.diagnosticContent p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.cardEyebrow,
+.chapterLabel {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
-.sectionIntro {
-  max-width: 680px;
-  margin: 0 0 40px;
-  line-height: 1.7;
-}
-
-.steps {
-  position: relative;
-  display: grid;
-  gap: 24px;
-  max-width: 900px;
-}
-
-.steps::before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  bottom: 22px;
-  left: 27px;
-  width: 4px;
-  border-radius: 999px;
-  background: rgba(1, 132, 184, 0.18);
-}
-
-.step {
-  position: relative;
-  display: grid;
-  grid-template-columns: 58px 1fr;
-  gap: 22px;
-  align-items: start;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
-.step > div {
-  padding: 22px 26px;
-  border-radius: 20px;
-  background: var(--surface);
-  box-shadow: 0 8px 24px rgba(7, 59, 76, 0.08);
-}
-
-.stepNumber {
-  position: relative;
-  z-index: 1;
-  display: flex;
+.cardAction {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 58px;
-  height: 58px;
-  border: 6px solid var(--block-mint);
-  border-radius: 50%;
-  background: var(--accent);
-  color: #073b4c;
-  font-size: 1.15rem;
+  gap: 8px;
+  min-height: 46px;
+  padding: 11px 18px;
+  border-radius: 14px;
+  background: var(--primary);
+  color: var(--surface);
+  font-size: 0.92rem;
   font-weight: 800;
-}
-
-.step:nth-child(2) .stepNumber {
-  background: #9ed8ff;
-}
-
-.step:nth-child(3) .stepNumber {
-  background: #ffb8d0;
-}
-
-.step:nth-child(4) .stepNumber {
-  background: #b8eedf;
-}
-
-.step h3 {
-  margin: 0 0 8px;
-  font-size: 1.3rem;
-}
-
-.step p {
-  margin: 0 0 16px;
-}
-
-.topics {
-  padding: 72px 0;
-  background: #f7fbfc;
-  color: #073b4c;
-}
-
-.topics .sectionIntro {
-  color: #073b4c;
-}
-
-.topics .sectionLabel {
-  color: var(--block-blue);
-}
-
-.topicGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.topicCard {
-  position: relative;
-  overflow: hidden;
-  min-height: 210px;
-  padding: 28px;
-  border: 0;
-  border-radius: 22px;
-  color: #073b4c;
-}
-
-.topicCard::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  right: -35px;
-  bottom: -40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.45);
-}
-
-.topicImage {
-  display: block;
-  width: 72px;
-  height: 72px;
-  margin-bottom: 22px;
-  border-radius: 16px;
-  object-fit: cover;
-}
-
-.topicCard:nth-child(1) {
-  background: var(--block-mint);
-}
-
-.topicCard:nth-child(2) {
-  background: var(--primary-light);
-}
-
-.topicCard:nth-child(3) {
-  background: var(--accent-light);
-}
-
-.topicCard:nth-child(4) {
-  background: var(--pink-light);
-}
-
-.topicCard h3 {
-  position: relative;
-  z-index: 1;
-  margin: 0 0 12px;
-  font-size: 1.35rem;
-  line-height: 1.3;
-}
-
-.topicCard p {
-  position: relative;
-  z-index: 1;
-  max-width: 390px;
-  margin: 0;
-  color: #073b4c;
-  line-height: 1.65;
-}
-
-@media (max-width: 700px) {
-  .topicGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.practice {
-  padding: 72px 0;
-  background: var(--accent-light);
-}
-
-.practiceGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.practiceCard {
-  padding: 24px;
-  border: 0;
-  border-radius: 18px;
-  background: var(--surface);
-  box-shadow: 0 8px 24px rgba(7, 59, 76, 0.08);
+  text-decoration: none;
+  white-space: nowrap;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
 
-.practiceCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(7, 59, 76, 0.12);
+.cardAction:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(1, 132, 184, 0.2);
 }
 
-.practiceType {
-  display: inline-block;
-  margin-bottom: 12px;
-  font-size: 0.85rem;
+.cardAction:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   SKYRIŲ SĄRAŠAS
+   ========================================================= */
+
+.chapterList {
+  display: grid;
+  gap: 14px;
+}
+
+.chapterCard {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 5px 18px rgba(7, 59, 76, 0.05);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.chapterCard:hover {
+  border-color: color-mix(in srgb, var(--primary) 30%, var(--border));
+}
+
+.chapterCard[open] {
+  border-color: color-mix(in srgb, var(--primary) 38%, var(--border));
+  box-shadow: 0 10px 28px rgba(7, 59, 76, 0.08);
+}
+
+.chapterSummary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 86px;
+  padding: 18px 22px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.chapterSummary::-webkit-details-marker {
+  display: none;
+}
+
+.chapterSummary::marker {
+  display: none;
+}
+
+.chapterSummary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.chapterNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.chapterSummaryText {
+  min-width: 0;
+}
+
+.chapterSummaryText h3 {
+  margin: 4px 0 0;
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.chapterCount {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.chapterArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary-light) 65%, white);
+  color: var(--primary);
+  font-weight: 800;
+  transition: transform 0.2s ease;
+}
+
+.chapterCard[open] .chapterArrow {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   IŠSKLEISTAS SKYRIUS
+   ========================================================= */
+
+.chapterContent {
+  display: grid;
+  gap: 24px;
+  padding: 4px 22px 26px 86px;
+  border-top: 1px solid color-mix(in srgb, var(--border) 65%, transparent);
+}
+
+.lessonBlock {
+  padding-top: 22px;
+}
+
+.lessonBlock h4 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+}
+
+.lessonList {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: lesson;
+}
+
+.lessonItem {
+  counter-increment: lesson;
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  min-height: 46px;
+  padding: 8px 12px 8px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.lessonItem::before {
+  content: counter(lesson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.lessonItem:last-child {
+  border-bottom: 0;
+}
+
+/* =========================================================
+   MOKYMOSI REZULTATAI
+   ========================================================= */
+
+.outcomesBlock {
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: var(--block-mint);
+}
+
+.contentLabel {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.065em;
+}
+
+.outcomeList {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.outcomeList li {
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.55;
+}
+
+.outcomeList li::before {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--primary);
+  font-weight: 900;
+}
+
+/* =========================================================
+   SKYRIAUS IŠŠŪKIS
+   ========================================================= */
+
+.challengeBlock,
+.extraBlock,
+.noteBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px 22px;
+  border-radius: 18px;
+}
+
+.challengeBlock {
+  background: var(--accent-light);
+}
+
+.extraBlock {
+  background: var(--pink-light);
+}
+
+.noteBlock {
+  display: block;
+  background: var(--primary-light);
+}
+
+.challengeIcon,
+.extraIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--surface);
+  font-size: 1rem;
+}
+
+.challengeText,
+.extraBlock p,
+.noteBlock p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.challengeText {
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+/* =========================================================
+   PROGRAMAVIMO PROCESAS
+   ========================================================= */
+
+.processBlock {
+  padding: 22px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--block-blue) 7%, white);
+}
+
+.processIntro {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.processSteps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.processStep {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.processStep > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.88rem;
   font-weight: 700;
 }
 
-.practice .sectionLabel {
-  color: var(--block-blue);
+.processArrow {
+  color: var(--primary);
+  font-weight: 900;
 }
 
-.practiceCard h3 {
-  margin: 0 0 12px;
-  font-size: 1.25rem;
-  line-height: 1.3;
-}
+/* =========================================================
+   BAIGIAMASIS IŠŠŪKIS
+   ========================================================= */
 
-.practiceCard p {
-  margin: 0;
-  line-height: 1.7;
-}
-
-@media (max-width: 900px) {
-  .practiceGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.progress {
+.finalChallenge {
   padding: 72px 0 96px;
   background: var(--block-blue);
 }
 
-.progressCard {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 28px;
-  border: 0;
-  border-radius: 18px;
+.finalChallengeCard {
+  padding: 36px;
+  border-radius: 26px;
   background: var(--surface);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.1);
 }
 
-.progress .sectionLabel {
-  color: white;
+.finalChallengeText {
+  width: 100%;
+  max-width: none;
 }
 
-.progressLabel {
-  margin: 0 0 8px;
-  font-size: 0.85rem;
-  font-weight: 700;
+.finalChallengeText .sectionLabel {
+  background: var(--accent-light);
+  color: var(--text);
 }
 
-.progress .sectionIntro {
-  color: #d9f5ee;
-}
-
-.progressCard h3 {
-  margin: 0 0 12px;
-  font-size: 1.4rem;
-}
-
-.progressCard p {
-  max-width: 620px;
+.finalChallengeText p:last-child {
   margin: 0;
+  color: var(--muted);
   line-height: 1.7;
 }
 
-.progressValue {
+.finalChallengeSteps {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.finalChallengeSteps span:nth-child(odd) {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  width: 88px;
-  height: 88px;
-  border: 10px solid
-    color-mix(in srgb, var(--block-pink) 22%, white);
-  border-radius: 50%;
-  background: var(--surface);
-  font-size: 1.5rem;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: var(--primary-light);
+  color: var(--text);
+  font-size: 0.9rem;
   font-weight: 800;
 }
 
-@media (max-width: 650px) {
-  .progressCard {
-    align-items: flex-start;
-    flex-direction: column;
+.finalChallengeSteps span:nth-child(even) {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .heroContent {
+    grid-template-columns: 1fr 0.75fr;
+    gap: 28px;
+  }
+
+  .heroVisual img {
+    width: min(100%, 320px);
+  }
+
+  .chapterContent {
+    padding-left: 70px;
   }
 }
 
-.learningPath h2,
-.topics h2,
-.practice h2,
-.progress h2 {
-  letter-spacing: -0.04em;
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .hero {
+    padding: 22px 0 38px;
+  }
+
+  .backLink {
+    margin-bottom: 24px;
+    font-size: 0.88rem;
+  }
+
+  .heroContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: left;
+  }
+
+  .heroText {
+    display: contents;
+  }
+
+  .eyebrow {
+    order: 1;
+    margin: 0;
+  }
+
+  .hero h1 {
+    order: 2;
+    margin: 0;
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .intro {
+    order: 3;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .heroVisual {
+    position: relative;
+    order: 4;
+    right: auto;
+    bottom: auto;
+
+    width: min(100%, 280px);
+    margin: 6px auto 0;
+    padding: 18px;
 }
 
-.step h3,
-.topicCard h3,
-.practiceCard h3,
-.progressCard h3 {
-  letter-spacing: -0.025em;
-}
+  .heroVisual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: none;
+  }
 
-.practiceImage {
-  display: block;
-  width: 72px;
-  height: 72px;
-  margin-bottom: 20px;
-  object-fit: contain;
-  padding: 6px;
-  border-radius: 16px;
-  background: color-mix(in srgb, var(--block-blue) 8%, white);
-}
-
-.practiceCard:nth-child(1) .practiceIcon {
-  background: color-mix(in srgb, var(--accent) 45%, white);
-}
-
-.practiceCard:nth-child(2) .practiceIcon {
-  background: color-mix(in srgb, var(--block-blue) 25%, white);
-}
-
-.practiceCard:nth-child(3) .practiceIcon {
-  background: color-mix(in srgb, var(--block-pink) 25%, white);
-}
-
-.progressContent {
-  flex: 1;
-}
-
-.progressBar {
-  width: 100%;
-  height: 12px;
-  margin-top: 20px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--block-pink) 18%, white);
-}
-
-.progressFill {
-  width: 0%;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--block-pink);
-}
-
-@media (min-width: 801px) {
   .heroVisual::before {
-    top: -8px;
-    right: -8%;
+    width: 75px;
+    top: 2px;
+    right: -4px;
   }
 
   .heroVisual::after {
-    bottom: -8px;
-    left: -10%;
+    width: 65px;
+    bottom: 0;
+    left: -3px;
+    border-radius: 18px;
+  }
+
+  /* Progresas */
+
+  .progressOverview {
+    padding-top: 20px;
+  }
+
+  .overviewCard {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .overviewHeader {
+    margin-bottom: 13px;
+  }
+
+  .overviewLabel {
+    font-size: 1rem;
+  }
+
+  .overviewMeta,
+  .overviewValue {
+    font-size: 0.88rem;
+  }
+
+  .overviewBar {
+    height: 9px;
+  }
+
+  /* Mokymosi kelias */
+
+  .learningPath {
+    padding: 42px 0 58px;
+  }
+
+  .sectionHeading {
+    margin-bottom: 24px;
+  }
+
+  .learningPath h2,
+  .finalChallenge h2 {
+    font-size: 1.7rem;
+  }
+
+  .sectionIntro {
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  /* Diagnostika */
+
+  .diagnosticCard {
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+    padding: 17px;
+    border-radius: 18px;
+  }
+
+  .diagnosticNumber {
+    width: 42px;
+    height: 42px;
+  }
+
+  .diagnosticContent h3 {
+    font-size: 1.08rem;
+  }
+
+  .diagnosticContent p {
+    display: none;
+  }
+
+  .cardAction {
+    grid-column: 2;
+    justify-self: start;
+    min-height: auto;
+    padding: 0;
+    background: transparent;
+    color: var(--primary);
+    box-shadow: none;
+  }
+
+  .cardAction:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Skyriai */
+
+  .chapterList {
+    gap: 10px;
+  }
+
+  .chapterCard {
+    border-radius: 17px;
+  }
+
+  .chapterSummary {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 12px;
+    min-height: 72px;
+    padding: 14px 15px;
+  }
+
+  .chapterNumber {
+    width: 42px;
+    height: 42px;
+    font-size: 0.85rem;
+  }
+
+  .chapterSummaryText h3 {
+    margin-top: 2px;
+    font-size: 0.98rem;
+    line-height: 1.3;
+  }
+
+  .chapterLabel {
+    display: none;
+  }
+
+  .chapterCount {
+    display: none;
+  }
+
+  .chapterArrow {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .chapterContent {
+    gap: 18px;
+    padding: 2px 15px 20px;
+  }
+
+  .lessonBlock {
+    padding-top: 17px;
+  }
+
+  .lessonBlock h4 {
+    font-size: 0.92rem;
+  }
+
+  .lessonList {
+    gap: 4px;
+  }
+
+  .lessonItem {
+    grid-template-columns: 30px 1fr;
+    min-height: 44px;
+    padding-right: 4px;
+    font-size: 0.9rem;
+  }
+
+  .lessonItem::before {
+    width: 24px;
+    height: 24px;
+    font-size: 0.7rem;
+  }
+
+  .outcomesBlock,
+  .challengeBlock,
+  .extraBlock,
+  .noteBlock,
+  .processBlock {
+    padding: 17px;
+    border-radius: 15px;
+  }
+
+  .contentLabel {
+    font-size: 0.7rem;
+  }
+
+  .outcomeList,
+  .challengeText,
+  .extraBlock p,
+  .noteBlock p,
+  .processIntro {
+    font-size: 0.9rem;
+  }
+
+  .processSteps {
+    display: grid;
+    justify-items: start;
+    gap: 6px;
+  }
+
+  .processStep {
+    display: grid;
+    gap: 5px;
+  }
+
+  .processArrow {
+    margin-left: 16px;
+  }
+
+  /* Baigiamasis iššūkis */
+
+  .finalChallenge {
+    padding: 48px 0 64px;
+  }
+
+  .finalChallengeCard {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .finalChallenge h2 {
+    white-space: normal;
+  }
+
+  .finalChallengeText p:last-child {
+    font-size: 0.94rem;
+  }
+
+  .finalChallengeSteps {
+    display: grid;
+    gap: 7px;
+    margin-top: 22px;
+  }
+
+  .finalChallengeSteps span:nth-child(odd) {
+    justify-content: flex-start;
+    width: fit-content;
+  }
+
+  .finalChallengeSteps span:nth-child(even) {
+    padding-left: 18px;
+    transform: rotate(90deg);
+    transform-origin: left center;
   }
 }
 
-.topicNumber {
-  position: absolute;
-  top: 20px;
-  right: 22px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  color: color-mix(in srgb, #073b4c 55%, transparent);
-}
+/* =========================================================
+   LABAI MAŽI EKRANAI
+   ========================================================= */
 
-.topicCardLink {
-  color: inherit;
-  text-decoration: none;
+@media (max-width: 420px) {
+  .heroText {
+    max-width: 72%;
+  }
+
+  .hero h1 {
+    font-size: 1.95rem;
+  }
+
+  .intro {
+    font-size: 0.88rem;
+  }
+
+  .heroVisual {
+    right: -18px;
+    width: 132px;
+  }
+
+  .overviewCard {
+    padding: 18px;
+  }
+
+  .chapterSummary {
+    padding: 13px;
+  }
+
+  .chapterNumber {
+    width: 40px;
+    height: 40px;
+  }
 }
